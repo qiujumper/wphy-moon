@@ -20,6 +20,19 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site container-fluid">
+  <div class="top-bar">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4"><div class="tel-num">电话: 1234567</div></div>
+          <div class="col-sm-4"></div>
+          <div class="col-sm-4">
+            <span><a href="#">购物车</a></span>
+            <span><a href="#">我的账户</a></span>
+            <span><a href="#">登录</a></span>
+          </div>
+      </div>      
+    </div>
+  </div>
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'wphy-sun' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">

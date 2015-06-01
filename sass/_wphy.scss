@@ -1,4 +1,10 @@
-$light-gray:#f7fcff;
+
 body{
-  background-color: $light-gray;
+  background-color: #f7fcff;
+}
+
+.top-bar{
+  border-bottom:1px solid #e7e7e7;
+  height: 40px;
+  line-height: 40px;
 }
