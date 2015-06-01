@@ -7,4 +7,14 @@ body{
   border-bottom:1px solid #e7e7e7;
   height: 40px;
   line-height: 40px;
+
+  .right-item>span{
+    
+    padding:13px;
+    border-right:1px solid #e7e7e7;
+    &:first-child{
+      border-left:1px solid #e7e7e7;
+    }
+  }
+
 }

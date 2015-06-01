@@ -25,7 +25,7 @@
       <div class="row">
         <div class="col-sm-4"><div class="tel-num">电话: 1234567</div></div>
           <div class="col-sm-4"></div>
-          <div class="col-sm-4">
+          <div class="col-sm-4 right-item">
             <span><a href="#">购物车</a></span>
             <span><a href="#">我的账户</a></span>
             <span><a href="#">登录</a></span>
