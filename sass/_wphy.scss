@@ -50,10 +50,36 @@ body{
   .flex-direction-nav a{
     top:40%;
   }
+   .slides>a{
+    display: block;
+   }
   .slides{
     max-height: 800px;
+
     li{
       max-height: 800px;
+      //position:relative;
+      .title{
+        position:absolute;
+        bottom:200px;
+        font-size:40px;
+        background-color: #1cbac8;
+        left:60px;
+        padding:9px;
+        
+        color:white;
+      }
+
+      .content{
+        bottom:100px;
+        max-width:500px;
+        left:60px;
+        position:absolute;
+        font-size: 25px;
+        background-color: #1cbac8;
+        padding:9px;
+        color:white;
+      }
     }
   }
   .flex-prev,.flex-next{
