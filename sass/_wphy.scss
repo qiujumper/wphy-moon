@@ -3,18 +3,103 @@ body{
   background-color: #f7fcff;
 }
 
-.top-bar{
-  border-bottom:1px solid #e7e7e7;
-  height: 40px;
-  line-height: 40px;
+.container-fluid{
+  padding:0px;
+}
 
-  .right-item>span{
-    
-    padding:13px;
-    border-right:1px solid #e7e7e7;
-    &:first-child{
-      border-left:1px solid #e7e7e7;
+
+.site-title{
+  float: left;
+  margin:0px;
+  height:50px;
+  line-height:50px;
+  color:white;
+  font-size: 18px;
+  a{
+    color:white;
+  }
+  text-indent: 10px;
+}
+.site-description{
+  height: 60px;
+  line-height:60px;
+  font-size: 15px;
+  margin:0px;
+  color:#888;
+  font-weight: 100;
+  font-style:italic;
+}
+
+.navbar{
+  margin-bottom:0px;
+}
+
+.navbar-toggle{
+  background-color: #e6edf2;
+  color:#7a828f;
+  font-size:20px;
+  padding:6px;
+  float:right;
+  margin-top:6px;
+  margin-bottom:0px;
+}
+.flexslider{
+  border:0px;
+  max-height: 800px;
+  overflow: hidden;
+  .flex-direction-nav a{
+    top:40%;
+  }
+  .slides{
+    max-height: 800px;
+    li{
+      max-height: 800px;
     }
+  }
+  .flex-prev,.flex-next{
+    height: 60px;
+    margin:30px;
+  }
+  .flex-control-nav{
+    bottom:20px;
+    z-index: 999;
   }
 
 }
+
+.site-header{
+  background-color: #222;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
