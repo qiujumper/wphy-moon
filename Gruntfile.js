@@ -6,9 +6,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-sass');
   //var ROOT_PATH = require('path').resolve();
-  var ROOT_PATH = 'http://localhost/uuuu';
-  var DIST_PATH = 'http://localhost/uuuu/dist';
-  var PUBLIC_PATH = 'http://localhost/uuuu/public';
+  var ROOT_PATH = 'http://localhost/moon';
+  var DIST_PATH = 'http://localhost/moon/dist';
+  var PUBLIC_PATH = 'http://localhost/moon/public';
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'), 
