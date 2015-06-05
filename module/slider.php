@@ -25,10 +25,10 @@
   
     <li><a href="<?php echo $value['link']; ?>" target="_blank">
       <img src="<?php echo $value['image']; ?>" />
-      <div class="title <?php echo $animated; ?>" style="<?php echo $text_css; ?>">
+      <div class="title no-phone <?php echo $animated; ?>" style="<?php echo $text_css; ?>">
         <?php echo $value['title']; ?>
       </div>
-      <div class="content <?php echo $animated; ?>" style="<?php echo $text_css; ?>">
+      <div class="content no-phone <?php echo $animated; ?>" style="<?php echo $text_css; ?>">
         <?php echo $value['description']; ?>
       </div></a>
     </li>
