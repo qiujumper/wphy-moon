@@ -1,3 +1,4 @@
+$green-blue:#1cbac8;
 ul,li{
   list-style-type: none;
   padding:0px;
@@ -8,9 +9,30 @@ button{
 }
 
 h1,h2,h3,h4,h5,h6{
-  
+  margin-top:10px;
+  margin-bottom:10px;
+}
+h1{
+  font-size: 23px;
+}
+h2{
+  font-size: 20px;
+}
+h3{
+  font-size: 18px;
+}
+h4{
+  font-size: 16px;
+}
+h5{
+  font-size: 15px;
+}
+h6{
+  font-size: 14px;
 } 
-
+p{
+  color:#777;
+}
 a,a:visited{
   color:#404040;
 }
@@ -21,4 +43,13 @@ a,a:visited{
 
 .clearfix{
   clear:both;
+}
+.row.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+.row.no-gutters  [class^="col-"],
+.row.no-gutters  [class*=" col-"] {
+  padding-right: 0;
+  padding-left: 0;
 }

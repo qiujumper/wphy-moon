@@ -1,16 +1,17 @@
 <?php
 get_header();
 include(locate_template('module/slider.php')); 
-get_sidebar();
 ?>
 
-  <div id="primary" class="content-area col-sm-9">
+  <div id="primary" class="container ">
     <main id="main" class="site-main" role="main">
 
-    <?php if ( have_posts() ) : ?>
+    <?php 
+    include(locate_template('module/icon-text-area.php'));
+    if ( have_posts() ) : ?>
 
       <?php /* Start the Loop */ ?>
-      <?php while ( have_posts() ) : the_post(); ?>
+      <?php while ( have_posts() ) : the_post(); ?> 
 
         <?php
 

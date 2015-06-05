@@ -97,7 +97,20 @@ body{
   background-color: #222;
 }
 
-
+.icon-text-area{
+  margin-top:8px;
+  .icon{
+    text-align: center;
+    font-size: 25px;
+    color:$green-blue;
+    margin-top:8px;
+  }
+  .readmore a{
+    color:$green-blue;
+    font-weight: bold;
+    font-size:13px;
+  }
+}
 
 
 
