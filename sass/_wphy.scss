@@ -113,7 +113,25 @@ body{
 }
 
 
-
+.half-block-area{
+  margin-top: 40px;
+  .half-block{
+    &:first-child{
+      background-color: rgb(247, 247, 247);
+    }
+    background-color: rgb(241, 241, 241);
+    padding:5%;
+    .title{
+      font-weight:bold;
+    }
+    .readmore{
+      padding:11px;
+      font-size:16px;
+      color:white;
+      background-color: $green-blue;
+    }
+  }
+}
 
 
 
@@ -141,9 +159,12 @@ body{
       .no-phone{
         display: none;
       }
-      .icon-text{
+      .row{
         text-align: center;
         margin:15px;
+        p{
+          text-align: left;
+        }
       }
     }
 

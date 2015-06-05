@@ -3,11 +3,12 @@ get_header();
 include(locate_template('module/slider.php')); 
 ?>
 
-  <div id="primary" class="container ">
+  <div id="primary" class="container-fulid ">
     <main id="main" class="site-main" role="main">
 
     <?php 
     include(locate_template('module/icon-text-area.php'));
+    include(locate_template('module/half-block-area.php'));
     if ( have_posts() ) : ?>
 
       <?php /* Start the Loop */ ?>
