@@ -12,5 +12,15 @@ jQuery(document).ready(function($){
       $content = slider.find('.content');
       $content.removeClass('bounceInDown');
     }
+  });
+  $('.image-post-slider-wrapper').flexslider({
+    animation: "slide",
+    itemWidth: 300,
+    itemMargin:30,
+    minItems:2,
+    maxItems:3,
+    move:1,
+    controlNav:true,
+    directionNav:false
   });   
 });

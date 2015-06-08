@@ -173,11 +173,66 @@ body{
 }
 
 
+.full-width-text-block{
+  background-color: #f9f9f9;
+  color:#333;
+  text-align: center;
+  padding:50px;
+  h3{
+    font-size: 30px;
+    margin:20px;
+    margin-top:40px;
+  }
+  .content p{
+    width:60%;margin:0 auto;
+    margin-bottom:40px;
+  }
+}
 
+.text-block-area{
+  margin-top:50px;
+  .text-block{
+    margin-bottom:20px;
+    min-height:150px;
+    .title{
+      font-weight: bold;
+      font-size: 17px;
+    }
+  }
+}
 
-
-
-
+.image-post-slider{
+  background-color: #f9f9f9;
+  padding-top: 120px;
+  padding-bottom: 60px;
+  overflow: hidden;
+  .image-post-slider-wrapper{
+    position:relative;
+  }
+  
+  li{
+    margin-right:30px;
+  }
+  .image-post{
+    background-color: white;
+    .info{
+      padding:9px;
+      .title{
+        font-size: 16px;
+        margin-bottom:10px;
+        margin-top:10px;
+        font-weight: bold;
+      }
+      .content{
+        margin-bottom:20px;
+        min-height:50px;
+      }
+      .date{
+        color:#999999;
+      }
+    }
+  }
+}
 
 
 /*==========  Non-Mobile First Method  ==========*/
