@@ -25,9 +25,7 @@
         <li>
           <?php include(locate_template('module/image-post.php')); ?>
         </li>
-      </ul>
-      
-      
+      </ul>      
     </div>
   </div>
 </div>

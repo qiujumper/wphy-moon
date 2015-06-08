@@ -234,7 +234,19 @@ body{
   }
 }
 
-
+.button-text{
+  text-align: center;
+  color: white;
+  background-color: #1cbac8;
+  font-size:20px;
+  padding:30px;
+  a{
+    color:white;
+    border:2px solid white;
+    padding:9px;
+    margin-left:25px;
+  }
+}
 /*==========  Non-Mobile First Method  ==========*/
 
     /* Large Devices, Wide Screens */
