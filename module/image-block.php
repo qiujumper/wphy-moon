@@ -1,16 +1,16 @@
 <div class="image-block">
-  <a href="#">
+  <a href="<?php echo $data['link']; ?>" target="_blank">
     <div class="image">
-      <img src="wp-content/themes/wphy-moon/image/600x400.jpg" alt="aaa">
+      <img src="<?php echo $data['image']; ?>" alt="<?php echo $data['title']; ?>">
       <div class="img-title">
-        SMART WATCH
+        <?php echo $data['title']; ?>
       </div>
     </div>
   </a>
   <div class="title">
-    <a href="#">SMART WATCH</a>
+    <a href="<?php echo $data['link']; ?>"><?php echo $data['title']; ?></a>
   </div>
   <div class="content">
-    <p>At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus.</p>
+    <p><?php echo $data['excerpt']; ?></p>
   </div>
 </div> 
