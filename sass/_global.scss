@@ -1,4 +1,16 @@
 $green-blue:#1cbac8;
+
+body ::selection {
+    color:white;
+    background-color:$green-blue;
+    text-shadow:none;
+}
+body ::-moz-selection {
+    color:white;
+    background-color:$green-blue;
+    text-shadow:none;
+}
+
 ul,li{
   list-style-type: none;
   padding:0px;
@@ -37,6 +49,12 @@ p{
 }
 a,a:visited{
   color:#404040;
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: none;
+  opacity: 0.7;
+  cursor:pointer; 
 }
 
 #content,#secondary{

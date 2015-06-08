@@ -9,6 +9,7 @@ include(locate_template('module/slider.php'));
     <?php 
     include(locate_template('module/icon-text-area.php'));
     include(locate_template('module/half-block-area.php'));
+    include(locate_template('module/image-block-area.php'));
     if ( have_posts() ) : ?>
 
       <?php /* Start the Loop */ ?>
