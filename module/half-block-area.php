@@ -1,3 +1,6 @@
+<?php 
+if (ot_get_option('show_block_2')=='on') {
+?>
 <div class="container-fluid ">
   <div class="row half-block-area">
   <?php
@@ -12,12 +15,11 @@
         'content'=>ot_get_option($block_content),
         'link'=>ot_get_option($block_link)
       );
-
       include(locate_template('module/half-block.php'));
-
-     } 
-    
-    ?>
-    
+     }     
+    ?>    
   </div>
 </div>
+<?php 
+}
+?>

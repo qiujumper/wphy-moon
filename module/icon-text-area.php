@@ -1,3 +1,6 @@
+<?php 
+if (ot_get_option('show_block_3')=='on') {
+?>
 <div class="container">
   <div class="icon-text-area row no-gutters">
     <?php
@@ -22,3 +25,6 @@
     ?>
   </div>
 </div>
+<?php 
+}
+?>
