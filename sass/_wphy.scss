@@ -248,6 +248,49 @@ body{
     margin-left:25px;
   }
 }
+.tag-cloud a {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid #666;
+  border-radius: 2px;
+  margin-right: 5px;
+  margin-bottom: 8px;
+  color: #666;
+  font-weight: 300;
+  font-size: 13px !important;
+}
+#footer{
+  background-color: #222;
+  
+  color:#888;
+  padding:60px 0 50px 0;
+  a{
+    color:#888;
+  }
+  .about-us{
+  
+  }
+  .title{
+    color:white;
+    margin-bottom:10px;
+  }
+
+  .recent-post{
+    li{
+      padding-top:5px;
+      padding-bottom:5px;
+      border-bottom:1px solid gray;
+    }
+  }
+  .copy-right{
+    text-align: center;
+    border-top:1px solid gray;
+    margin-top:20px;
+    h3{
+      font-size:14px;
+    }
+  }
+}
 /*==========  Non-Mobile First Method  ==========*/
 
     /* Large Devices, Wide Screens */

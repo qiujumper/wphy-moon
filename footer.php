@@ -11,13 +11,49 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'wphy-sun' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'wphy-sun' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'wphy-sun' ), 'wphy-sun', '<a href="http://wordpresshy.com/" rel="designer">wordpresshy.com</a>' ); ?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+	<footer id="footer" class="site-footer " role="contentinfo">
+  <div class="container">  
+		<div class="row">
+    <div class="col-sm-3">
+      <div class="about-us">
+        <div class="title"><h3><?php bloginfo( 'name' ); ?></h3></div>
+        <div class="content"><?php echo ot_get_option('about_us_footer'); ?></div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="title">
+        最新文章
+      </div>
+      <div class="recent-post">
+      <ul>          
+        <?php 
+          $args = array( 'numberposts' => '5' );
+          $recent_posts = wp_get_recent_posts( $args ); 
+          foreach( $recent_posts as $recent ){
+            echo '<li><a href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a> </li> ';
+          }
+        ?>
+      </ul>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="title">热门标签</div>
+      <div class="tag-cloud">
+        <?php wp_tag_cloud( 'number=10&orderby=count&order=RAND' ); ?>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="title">联系方式</div>
+      <?php include(locate_template('module/contact-info.php')); ?>
+      
+    </div>  
+    </div>
+    <div class="col-sm-12 copy-right">
+      <h3>
+        copyright © 2015 Wordpress花园 |  主题由<a href="http://wordpresshy.com/" target="_blank">Wordpress花园</a>提供</h3>
+    </div>
+  </div>
+	</footer><!-- #footer -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
