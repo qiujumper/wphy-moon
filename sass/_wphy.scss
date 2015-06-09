@@ -334,8 +334,12 @@ input[type="search"].search-field{
   background: #ffffff;
 
 }
+#secondary{
+  padding-top:60px;
+}
 
-.menu-sidebar-container{
+.widget{
+  margin-bottom:30px;
   li{
       border-bottom: 1px solid #efefef;
       position: relative;
@@ -354,6 +358,11 @@ input[type="search"].search-field{
       color: #777777;
     }
   }
+}
+#primary{
+  padding-top:60px;
+  padding-left:60px;
+  border-left: 1px solid #f9f9f9;
 }
 /*==========  Non-Mobile First Method  ==========*/
 
