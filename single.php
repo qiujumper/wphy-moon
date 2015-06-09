@@ -5,7 +5,10 @@
  * @package wphy-sun
  */
 
-get_header(); 
+get_header();
+?>
+<div class="container">
+<?php 
 get_sidebar();
 ?>
 
@@ -29,5 +32,5 @@ get_sidebar();
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
+</div><!-- container -->
 <?php get_footer(); ?>

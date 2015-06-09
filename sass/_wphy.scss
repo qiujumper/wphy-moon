@@ -291,6 +291,34 @@ body{
     }
   }
 }
+
+.pagination{
+  width:100%;
+  text-align:center;
+  a{
+    padding:8px;
+    margin-right:5px;
+    background-color: $green-blue;
+    color:white;
+  }
+  .current{
+    padding:0px;
+    margin-right:5px;
+    color:$green-blue;
+  }
+}
+.page-header{
+  text-align: center;
+    background: #f9f9f9;
+  border-bottom: 0 none #efefef;
+  color:#777;
+  margin:0px;
+  .page-title{
+    margin:0px;
+    height: 60px;
+    line-height: 60px;
+  }
+}
 /*==========  Non-Mobile First Method  ==========*/
 
     /* Large Devices, Wide Screens */
