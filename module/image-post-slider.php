@@ -1,5 +1,5 @@
 <?php 
-  if(ot_get_option('show_small_slider')=='on'){echo "string";
+  if(ot_get_option('show_small_slider')=='on'){
     $slider_arr = ot_get_option('small_slider');
     
 ?>
