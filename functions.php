@@ -115,6 +115,8 @@ add_action( 'widgets_init', 'wphy_sun_widgets_init' );
  */
 function wphy_sun_scripts() {
 	 wp_enqueue_style( 'wphy-flexslider-style', get_template_directory_uri().'/css/flexslider.css' );
+	 wp_enqueue_style( 'wphy-font-awesome', get_template_directory_uri().'/css/font-awesome.css' );
+
 	 wp_enqueue_style( 'wphy-animate-style', get_template_directory_uri().'/css/animate.css' );
 
 

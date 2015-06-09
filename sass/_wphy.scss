@@ -319,6 +319,42 @@ body{
     line-height: 60px;
   }
 }
+.search-form{
+  label{
+    width:90%;
+  }
+}
+input[type="search"].search-field{
+    box-sizing: border-box;
+  width: 100%;
+  border: 1px solid #e1e1e1;
+  padding: 10px 12px 10px 36px;
+  box-shadow: 0 2px 0 0 rgba(0,0,0,.03);
+  border-radius: 2px;
+  background: #ffffff;
+
+}
+
+.menu-sidebar-container{
+  li{
+      border-bottom: 1px solid #efefef;
+      position: relative;
+      padding: 10px 0;
+      &:after{
+        font-family: "FontAwesome";
+        content: "\f105";
+        position: absolute;
+        top: 10px;
+        right: 0;
+        font-size: 14px;
+        color: #cccccc;
+      }
+    a{
+      display: block;
+      color: #777777;
+    }
+  }
+}
 /*==========  Non-Mobile First Method  ==========*/
 
     /* Large Devices, Wide Screens */
