@@ -6,6 +6,8 @@
  */
 require get_template_directory() . '/inc/helper.php';
 require get_template_directory() . '/inc/wp_bootstrap_navwalker.php';
+require get_template_directory() . '/inc/theme_option.php';
+
 /**
  * Required: set 'ot_theme_mode' filter to true.
  */
