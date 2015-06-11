@@ -362,6 +362,46 @@ input[type="search"].search-field{
   padding-top:60px;
   padding-left:60px;
   border-left: 1px solid #f9f9f9;
+  article{
+    border-bottom:1px solid #efefef;
+    margin-bottom:30px;
+    padding-bottom:40px;
+  }
+  .feature-image img{
+    width:100%; 
+  }
+  .entry-title{
+    margin-top:20px;
+    margin-bottom:20px;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .read-more{
+    color:$green-blue;
+  }
+  .meta-info{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    color:#999999;
+    font-weight: bold;
+    font-size:13px;
+    a{
+      color:#999999;
+    }
+    span{
+      float:left;
+      margin-left:5px;
+      li{
+        margin-left:5px;
+      }
+    }
+  }
+  .post-categories{
+    display: inline;
+    li{
+      float: left;
+    }
+  }
 }
 /*==========  Non-Mobile First Method  ==========*/
 

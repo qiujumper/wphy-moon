@@ -32,10 +32,11 @@ function get_feature_image_by_id($post_id,$size = 'full', $all=false){
 
 }
 
-function custom_excerpt_length( $length ) {
-    return 200;
+function chinese_excerpt($text, $lenth=100) {
+$text = mb_substr($text,0, $lenth);
+ return $text.'...';
 }
-add_filter( 'excerpt_length', 'custom_excerpt_length');
+add_filter('the_excerpt', ' chinese_excerpt ');
 
 
 /**
