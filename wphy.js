@@ -22,5 +22,12 @@ jQuery(document).ready(function($){
     move:1,
     controlNav:true,
     directionNav:false
-  });   
+  }); 
+
+  //global hover effect for image
+  $('img').hover(function() {
+    $(this).addClass('pulse');
+  }, function() {
+    $(this).removeClass('pulse');
+  });  
 });

@@ -1,19 +1,22 @@
-<?php
-/**
- * Template part for displaying single posts.
- *
- * @package wphy-sun
- */
-
-?>
-
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<?php 
+if (has_post_thumbnail(get_the_ID())) {
+?>
+	<div class="feature-image">
+		<img src="<?php echo get_feature_image_by_id(get_the_ID()); ?>" alt="<?php the_title(); ?>" class="animated" >
+	</div>
+<?php 
+}
+?>
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
-		<div class="entry-meta">
-			<?php wphy_sun_posted_on(); ?>
-		</div><!-- .entry-meta -->
+		<div class="meta-info">
+			<span><?php the_author(); ?> | </span>
+			<span><?php the_date('Y-m-d'); ?> | </span>
+			<span><?php the_category(); ?></span>
+			<div class="clearfix"></div>		
+		</div>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
@@ -25,9 +28,7 @@
 			) );
 		?>
 	</div><!-- .entry-content -->
+	<div class="tag-cloud"><?php the_tags('','',''); ?></div>
 
-	<footer class="entry-footer">
-		<?php wphy_sun_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
 

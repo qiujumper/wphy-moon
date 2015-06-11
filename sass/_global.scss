@@ -10,7 +10,14 @@ body ::-moz-selection {
     background-color:$green-blue;
     text-shadow:none;
 }
-
+#submit{
+  background: #1cbac8;
+  border-color: #1cbac8;
+  color:white;
+  font-weight: bold;
+  padding:12px;
+  box-shadow:none;
+}
 ul,li{
   list-style-type: none;
   padding:0px;
@@ -59,7 +66,10 @@ a:hover{
   opacity: 0.7;
   cursor:pointer; 
 }
-
+button,button:hover{
+  box-shadow:none;
+  border:none;
+}
 #content,#secondary{
   padding:0px;
 }

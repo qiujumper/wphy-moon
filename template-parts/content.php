@@ -12,7 +12,7 @@
 if (has_post_thumbnail(get_the_ID())) {
 ?>
 	<div class="feature-image">
-		<img src="<?php echo get_feature_image_by_id(get_the_ID()); ?>" alt="<?php the_title(); ?>">
+		<img src="<?php echo get_feature_image_by_id(get_the_ID()); ?>" alt="<?php the_title(); ?>" class="animated" >
 	</div>
 <?php 
 }

@@ -3,7 +3,7 @@ get_header();
 include(locate_template('module/slider.php')); 
 ?>
 
-  <div id="primary" class="container-fulid ">
+  <div class="container-fulid ">
     <main id="main" class="site-main" role="main">
 
     <?php 

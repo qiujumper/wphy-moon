@@ -33,13 +33,17 @@
 }
 
 .navbar-toggle{
-  background-color: #e6edf2;
+  
   color:#7a828f;
   font-size:20px;
   padding:6px;
   float:right;
   margin-top:6px;
   margin-bottom:0px;
+  border:none;
+  span{
+    color:white;
+  }
 }
 .flexslider{
   border:0px;
@@ -396,6 +400,12 @@ input[type="search"].search-field{
       }
     }
   }
+  .tag-cloud{
+    a{
+      border-color:#efefef;
+      color:#999999;
+    }
+  }
   .post-categories{
     display: inline;
     li{
@@ -426,6 +436,15 @@ input[type="search"].search-field{
         p{
           text-align: left;
         }
+      }
+      .site-branding.row{
+        margin:0px;
+      }
+      #primary{
+        padding-left:inherit;
+      }
+      #menu-top-menu{
+        text-align: left;
       }
     }
 
