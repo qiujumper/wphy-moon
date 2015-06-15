@@ -14,6 +14,7 @@ function theme_option_wphy() {
 }
 add_action( 'admin_init', 'register_contact_settings' );
 function register_contact_settings() {
+
   //register our settings
   register_setting( 'contact-settings-group', 'tel' );
   register_setting( 'contact-settings-group', 'email' );
@@ -24,6 +25,18 @@ function register_contact_settings() {
   register_setting( 'contact-settings-group', 'qc' );
   register_setting( 'contact-settings-group', 'address' );
   register_setting( 'contact-settings-group', 'about_us' );
+
+  
+  add_option('tel','021-1234567');
+  add_option('email','wordpresshy@126.com');
+  add_option('qq','41551722');
+  add_option('qq_group','348046974');
+  add_option('weixin','wordpresshy');
+  add_option('weibo','iqiujumper');
+  add_option('qc','wordpresshy');
+  add_option('address','shanghai');
+  add_option('about_us','wordpress花园提供多种基于wordpress的技术服务,分享Wordpress视频教程,Wordpress模板下载,Wordpress主题下载，Wordpress汉化以及Wordpress项目合作。');
+  
 
 }
 

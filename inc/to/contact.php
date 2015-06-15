@@ -1,6 +1,6 @@
 
 <div class="wrap input-group">
-<h2>Your Plugin Name</h2>
+<h2>联系方式</h2>
 
 <form method="post" action="options.php">
     <?php settings_fields( 'contact-settings-group' ); ?>
