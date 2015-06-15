@@ -54,3 +54,69 @@ function get_permalink_by_slug($page_slug,$post_type = 'page' ) {
     }
     return null;
 }
+
+/**
+ * create image field for theme option
+ * $text_id : the id of the result input field;
+ * $image_id : the id of image uplad button field
+ */
+ 
+
+function print_image_field($text_id,$image_id,$option_slug){
+
+// jQuery
+wp_enqueue_script('jquery');
+// This will enqueue the Media Uploader script
+wp_enqueue_media();
+?>
+    <div>
+    <input type="text" name="image_url" id="<?php echo $text_id; ?>" value="<?php echo esc_attr( get_option($option_slug) ); ?>" class="regular-text">
+    <input type="button" name="<?php echo $image_id; ?>" id="<?php echo $image_id; ?>" class="button-secondary" value="选择图片">
+    <br/>
+    <img src="#" alt="" class="<?php echo $text_id; ?>" style="width:300px; display: none;" >
+</div>
+<script type="text/javascript">
+jQuery(document).ready(function($){
+    $('#<?php echo $image_id; ?>').click(function(e) {
+        e.preventDefault();
+        var image = wp.media({ 
+            title: 'Upload Image',
+            // mutiple: true if you want to upload multiple files at once
+            multiple: false
+        }).open()
+        .on('select', function(e){
+            // This will return the selected image from the Media Uploader, the result is an object
+            var uploaded_image = image.state().get('selection').first();
+            // We convert uploaded_image to a JSON object to make accessing it easier
+            
+            var image_url = uploaded_image.toJSON().url;
+            // Let's assign the url value to the input field
+            $('#<?php echo $text_id; ?>').val(image_url);
+            $('.<?php echo $text_id; ?>').attr('src',image_url).show();
+        });
+    });
+});
+</script>
+
+<?php
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
