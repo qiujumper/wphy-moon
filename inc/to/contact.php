@@ -58,7 +58,7 @@
       <tr>
       <td>二维码</td>
         <td>
-          <input class="form-control" type="text" name="qc" value="<?php echo esc_attr( get_option('qc') ); ?>" />
+          <?php print_image_field('qc','qc_button'); ?>        
         </td>
       </tr>
 

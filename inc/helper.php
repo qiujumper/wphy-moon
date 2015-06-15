@@ -57,12 +57,12 @@ function get_permalink_by_slug($page_slug,$post_type = 'page' ) {
 
 /**
  * create image field for theme option
- * $text_id : the id of the result input field;
- * $image_id : the id of image uplad button field
+ * $option_slug : the id of the result input field;
+ * $button_id : the id of image uplad button field
  */
  
 
-function print_image_field($text_id,$image_id,$option_slug){
+function print_image_field($option_slug,$button_id){
 
 // jQuery
 wp_enqueue_script('jquery');
@@ -70,14 +70,14 @@ wp_enqueue_script('jquery');
 wp_enqueue_media();
 ?>
     <div>
-    <input type="text" name="image_url" id="<?php echo $text_id; ?>" value="<?php echo esc_attr( get_option($option_slug) ); ?>" class="regular-text">
-    <input type="button" name="<?php echo $image_id; ?>" id="<?php echo $image_id; ?>" class="btn btn-info" value="选择图片">
+    <input type="text" name="<?php echo $option_slug; ?>" id="<?php echo $option_slug; ?>" value="<?php echo get_option($option_slug); ?>" class="regular-text">
+    <input type="button" name="<?php echo $button_id; ?>" id="<?php echo $button_id; ?>" class="btn btn-info" value="选择图片">
     <br/>
-    <img src="#" alt="" class="<?php echo $text_id; ?>" style="width:300px; display: none;" >
+    <img src="<?php echo esc_attr( get_option($option_slug) ); ?>" alt="" class="<?php echo $option_slug; ?>" style="width:300px;" >
 </div>
 <script type="text/javascript">
 jQuery(document).ready(function($){
-    $('#<?php echo $image_id; ?>').click(function(e) {
+    $('#<?php echo $button_id; ?>').click(function(e) {
         e.preventDefault();
         var image = wp.media({ 
             title: 'Upload Image',
@@ -91,8 +91,8 @@ jQuery(document).ready(function($){
             
             var image_url = uploaded_image.toJSON().url;
             // Let's assign the url value to the input field
-            $('#<?php echo $text_id; ?>').val(image_url);
-            $('.<?php echo $text_id; ?>').attr('src',image_url).show();
+            $('#<?php echo $option_slug; ?>').val(image_url);
+            $('.<?php echo $option_slug; ?>').attr('src',image_url);
         });
     });
 });
