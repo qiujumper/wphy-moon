@@ -37,6 +37,9 @@ function register_contact_settings() {
   add_option('address','shanghai');
   add_option('about_us','wordpress花园提供多种基于wordpress的技术服务,分享Wordpress视频教程,Wordpress模板下载,Wordpress主题下载，Wordpress汉化以及Wordpress项目合作。');
   
+  register_setting( 'slider-settings-group', "show_slider" );
+
+
   //register slider setting
   for ($i=0; $i <5 ; $i++) { 
     register_setting( 'slider-settings-group', "slider_title_{$i}" );

@@ -1,8 +1,15 @@
 body{
   height:auto;
 }
-
+.checkbox input[type=checkbox], .checkbox-inline input[type=checkbox], .radio input[type=radio], .radio-inline input[type=radio]{
+  position:relative;
+  margin:0px;
+}
 .theme-field{
   margin-bottom: 15px;
   overflow: hidden;
+}
+
+.is_show{
+  padding:10px;
 }

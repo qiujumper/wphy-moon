@@ -4,6 +4,13 @@
   <?php 
     settings_fields( 'slider-settings-group' ); 
     do_settings_sections( 'slider-settings-group' ); 
+  ?>
+  <div class="checkbox">
+    <p class="bg-warning is_show">
+      <span>是否开启</span> <input type="checkbox"  id="show_slider" name="show_slider" <?php echo get_option("show_slider"); ?> value="checked">
+    </p>
+  </div>
+  <?php
     for ($i=0; $i <5 ; $i++) { 
 ?>
 <div class="row">
