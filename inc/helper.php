@@ -71,7 +71,7 @@ wp_enqueue_media();
 ?>
     <div>
     <input type="text" name="image_url" id="<?php echo $text_id; ?>" value="<?php echo esc_attr( get_option($option_slug) ); ?>" class="regular-text">
-    <input type="button" name="<?php echo $image_id; ?>" id="<?php echo $image_id; ?>" class="button-secondary" value="选择图片">
+    <input type="button" name="<?php echo $image_id; ?>" id="<?php echo $image_id; ?>" class="btn btn-info" value="选择图片">
     <br/>
     <img src="#" alt="" class="<?php echo $text_id; ?>" style="width:300px; display: none;" >
 </div>
