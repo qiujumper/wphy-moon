@@ -10,8 +10,24 @@ function frog_admin_style() {
 add_action( 'admin_menu', 'theme_option_wphy' );
 
 function theme_option_wphy() {
-  add_menu_page( 'WordPress花园', 'WordPress花园', 'manage_options', 'theme-option-wphy', 'theme_option_html_wphy' );
+  add_menu_page( 'WordPress花园', 'WordPress花园', 'manage_options', 'theme-option-wphy.php', 'theme_option_html_wphy' );
 }
+add_action( 'admin_init', 'register_contact_settings' );
+function register_contact_settings() {
+  //register our settings
+  register_setting( 'contact-settings-group', 'tel' );
+  register_setting( 'contact-settings-group', 'email' );
+  register_setting( 'contact-settings-group', 'qq' );
+  register_setting( 'contact-settings-group', 'qq_group' );
+  register_setting( 'contact-settings-group', 'weixin' );
+  register_setting( 'contact-settings-group', 'weibo' );
+  register_setting( 'contact-settings-group', 'qc' );
+  register_setting( 'contact-settings-group', 'address' );
+  register_setting( 'contact-settings-group', 'about_us' );
+
+}
+
+
 
 function theme_option_html_wphy() {
   if ( !current_user_can( 'manage_options' ) )  {
@@ -62,5 +78,6 @@ function theme_option_html_wphy() {
   </div>
 
 </div>
-<?php  echo '</div></div>';
+<?php  echo '</div></div>
+<div class="clear"></div>';
 }
