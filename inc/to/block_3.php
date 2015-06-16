@@ -45,7 +45,7 @@
           <div class="theme-field">
             <div class="col-sm-2">内容</div>
             <div class="col-sm-10">
-              <textarea class="form-control" rows="9" cols="50" name="<?php echo "block_3_content_{$i}"; ?>" ><?php echo esc_attr( get_option("block_3_content_{$i}") ); ?></textarea>
+              <?php wp_editor( get_option("block_3_content_{$i}"), "block_3_content_{$i}"); ?> 
             </div>
           </div>
         </div>

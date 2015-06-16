@@ -65,7 +65,7 @@
       <tr>
       <td>关于我们</td>
         <td>
-          <textarea class="form-control" rows="9" cols="50" name="about_us" ><?php echo esc_attr( get_option('about_us') ); ?></textarea>
+          <?php wp_editor( get_option("about_us"), "about_us"); ?> 
         </td>
       </tr>
         

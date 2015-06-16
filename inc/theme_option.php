@@ -69,6 +69,15 @@ function register_contact_settings() {
     register_setting( 'block-3-settings-group', "block_3_url_{$i}" );
   }
 
+  //register block 3 setting
+  register_setting( 'block-2-settings-group', "show_block_2" );
+
+  for ($i=0; $i <2 ; $i++) { 
+    register_setting( 'block-2-settings-group', "block_2_title_{$i}" );
+    register_setting( 'block-2-settings-group', "block_2_content_{$i}" );
+    register_setting( 'block-2-settings-group', "block_2_url_{$i}" );
+  }
+
 }
 
 
@@ -83,8 +92,8 @@ function theme_option_html_wphy() {
   <h1>欢迎使用Wordpress花园的主题!</h1>
   <blockquote>
     <p>欢迎使用wordpress花园的“月亮”主题！
-在Wordpress花园的官网(http://wordpresshy.com)上有详细的主题使用【配套视频教程】，<br/>手把手让你零基础不求助任何人搭建起你自己的Wordpress网站！
-如果阁下在使用该主题的过程中有任何疑问，<br/>可以发邮件到<span class="text-primary">wordpresshy@126.com</span>，或者到Wordpress网站对应的主题页面下留言。
+在Wordpress花园的官网(http://wordpresshy.com)上有详细的主题使用【配套视频教程】<br/>手把手让你零基础不求助任何人搭建起你自己的Wordpress网站！
+如果阁下在使用该主题的过程中有任何疑问<br/>可以发邮件到<span class="text-primary">wordpresshy@126.com</span>，或者到Wordpress网站对应的主题页面下留言
 </p>
   </blockquote>
   <p>
