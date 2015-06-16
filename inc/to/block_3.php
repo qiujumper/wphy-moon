@@ -10,6 +10,7 @@
         <span>是否开启</span> <input type="checkbox"  id="show_block_3" name="show_block_3" <?php echo get_option("show_block_3"); ?> value="checked">
       </p>
     </div><br/>
+    
     <?php
     for ($i=0; $i <6 ; $i++) { 
       ?>

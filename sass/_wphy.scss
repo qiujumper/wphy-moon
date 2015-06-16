@@ -54,33 +54,40 @@
   }
    .slides>a{
     display: block;
+    
    }
   .slides{
     max-height: 800px;
 
     li{
+      a:hover{
+        opacity:1;
+      }
       max-height: 800px;
       //position:relative;
-      .title{
-        position:absolute;
-        bottom:200px;
-        font-size:40px;
-        background-color: #1cbac8;
-        left:60px;
-        padding:9px;
-        
-        color:white;
-      }
-
-      .content{
+      .info{
+        position: absolute;
         bottom:100px;
-        max-width:500px;
         left:60px;
-        position:absolute;
-        font-size: 25px;
-        background-color: #1cbac8;
-        padding:9px;
-        color:white;
+        max-width:500px;
+
+        .title{
+          margin-bottom: 20px;
+          font-size:40px;
+          background-color: #1cbac8;
+          
+          padding:9px;
+          
+          color:white;
+        }
+
+        .content{
+          
+          font-size: 25px;
+          background-color: #1cbac8;
+          padding:9px;
+          color:white;
+        }
       }
     }
   }

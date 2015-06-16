@@ -1,40 +1,38 @@
 <?php 
-  if(ot_get_option('show_slider')=='on'){
+  if(get_option('show_slider')=='checked'){
 ?>
 <div class="clearfix"></div>
 <div class="flexslider">
   <ul class="slides">
 <?php
-  $text_css='';
   
-  if(ot_get_option('text_color')){
-    $text_css.="color:".ot_get_option('text_color').";";
-  }
-  if(ot_get_option('bg_color')){
-    $text_css.="background-color:".ot_get_option('bg_color').";";
-  }
 
-  if(ot_get_option('use_animation')=='on'){
+  if(get_option('use_animation')=='checked'){
     $animated='animated';
   }else{
     $animated='';
   } 
-  $slider_arr = ot_get_option('sliders');
-  foreach ($slider_arr as $key => $value) {
+  for ($i=0; $i < 5 ; $i++) {
+  if(get_option("slider_image_{$i}")){ 
 ?>
   
-    <li><a href="<?php echo $value['link']; ?>" target="_blank">
-      <img src="<?php echo $value['image']; ?>" />
-      <div class="title no-phone <?php echo $animated; ?>" style="<?php echo $text_css; ?>">
-        <?php echo $value['title']; ?>
-      </div>
-      <div class="content no-phone <?php echo $animated; ?>" style="<?php echo $text_css; ?>">
-        <?php echo $value['description']; ?>
-      </div></a>
+    <li>
+      <a href="<?php echo get_option("slider_url_{$i}"); ?>" target="_blank">
+        <img src="<?php echo get_option("slider_image_{$i}"); ?>" />
+        <div class="info">
+          <div class="title no-phone <?php echo $animated; ?>" style="<?php echo $text_css; ?>">
+            <?php echo get_option("slider_title_{$i}"); ?>
+          </div>
+          <div class="content no-phone <?php echo $animated; ?>" style="<?php echo $text_css; ?>">
+            <?php echo get_option("slider_content_{$i}"); ?>
+          </div>
+        </div>        
+      </a>
     </li>
   
 <?php
   }
+}
 ?>
   </ul>
 </div>

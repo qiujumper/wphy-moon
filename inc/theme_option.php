@@ -41,6 +41,7 @@ function register_contact_settings() {
 
   //register slider setting
   register_setting( 'slider-settings-group', "show_slider" );
+  register_setting( 'slider-settings-group', "use_animation" );
 
   for ($i=0; $i <5 ; $i++) { 
     register_setting( 'slider-settings-group', "slider_title_{$i}" );
