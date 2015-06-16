@@ -69,7 +69,7 @@ function register_contact_settings() {
     register_setting( 'block-3-settings-group', "block_3_url_{$i}" );
   }
 
-  //register block 3 setting
+  //register block 2 setting
   register_setting( 'block-2-settings-group', "show_block_2" );
 
   for ($i=0; $i <2 ; $i++) { 
@@ -91,6 +91,14 @@ function register_contact_settings() {
   register_setting('full-width-text-settings-group','full_width_button_title');
   register_setting('full-width-text-settings-group','full_width_button_content');
   register_setting('full-width-text-settings-group','full_width_button_link');
+
+  //register text block setting
+  register_setting( 'text-block-settings-group', "show_text_block" );
+
+  for ($i=0; $i <9 ; $i++) { 
+    register_setting( 'text-block-settings-group', "text_block_title_{$i}" );
+    register_setting( 'text-block-settings-group', "text_block_content_{$i}" );
+  }
 }
 
 
