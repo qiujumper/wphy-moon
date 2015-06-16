@@ -17,7 +17,7 @@
     <div class="col-sm-3">
       <div class="about-us">
         <div class="title"><h3><?php bloginfo( 'name' ); ?></h3></div>
-        <div class="content"><?php echo ot_get_option('about_us_footer'); ?></div>
+        <div class="content"><?php echo get_option('about_us'); ?></div>
       </div>
     </div>
     <div class="col-sm-3">
