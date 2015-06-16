@@ -10,7 +10,7 @@ require get_template_directory() . '/inc/theme_option.php';
 
 
 
-if ( ! function_exists( 'wphy_sun_setup' ) ) :
+if ( ! function_exists( 'wphy_moon_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -18,7 +18,7 @@ if ( ! function_exists( 'wphy_sun_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function wphy_sun_setup() {
+function wphy_moon_setup() {
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
@@ -75,13 +75,13 @@ function wphy_sun_setup() {
 	) );
 
 	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'wphy_sun_custom_background_args', array(
+	add_theme_support( 'custom-background', apply_filters( 'wphy_moon_custom_background_args', array(
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
 }
-endif; // wphy_sun_setup
-add_action( 'after_setup_theme', 'wphy_sun_setup' );
+endif; // wphy_moon_setup
+add_action( 'after_setup_theme', 'wphy_moon_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -90,17 +90,17 @@ add_action( 'after_setup_theme', 'wphy_sun_setup' );
  *
  * @global int $content_width
  */
-function wphy_sun_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'wphy_sun_content_width', 640 );
+function wphy_moon_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'wphy_moon_content_width', 640 );
 }
-add_action( 'after_setup_theme', 'wphy_sun_content_width', 0 );
+add_action( 'after_setup_theme', 'wphy_moon_content_width', 0 );
 
 /**
  * Register widget area.
  *
  * @link http://codex.wordpress.org/Function_Reference/register_sidebar
  */
-function wphy_sun_widgets_init() {
+function wphy_moon_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar', 'wphy-sun' ),
 		'id'            => 'sidebar-1',
@@ -111,12 +111,12 @@ function wphy_sun_widgets_init() {
 		'after_title'   => '</h1>',
 	) );
 }
-add_action( 'widgets_init', 'wphy_sun_widgets_init' );
+add_action( 'widgets_init', 'wphy_moon_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
-function wphy_sun_scripts() {
+function wphy_moon_scripts() {
 	 wp_enqueue_style( 'wphy-flexslider-style', get_template_directory_uri().'/css/flexslider.css' );
 	 wp_enqueue_style( 'wphy-font-awesome', get_template_directory_uri().'/css/font-awesome.css' );
 
@@ -137,7 +137,7 @@ function wphy_sun_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'wphy_sun_scripts' );
+add_action( 'wp_enqueue_scripts', 'wphy_moon_scripts' );
 
 /**
  * Implement the Custom Header feature.
