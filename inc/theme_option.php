@@ -38,6 +38,7 @@ function register_contact_settings() {
   add_option('about_us','wordpress花园提供多种基于wordpress的技术服务,分享Wordpress视频教程,Wordpress模板下载,Wordpress主题下载，Wordpress汉化以及Wordpress项目合作。');
   
   register_setting( 'slider-settings-group', "show_slider" );
+  register_setting( 'slider-settings-group', "show_small_slider" );
 
 
   //register slider setting
@@ -46,6 +47,14 @@ function register_contact_settings() {
     register_setting( 'slider-settings-group', "slider_content_{$i}" );
     register_setting( 'slider-settings-group', "slider_image_{$i}" );
     register_setting( 'slider-settings-group', "slider_url_{$i}" );
+  }
+
+  //register small slider setting
+  for ($i=0; $i <10 ; $i++) { 
+    register_setting( 'small-slider-settings-group', "small_slider_title_{$i}" );
+    register_setting( 'small-slider-settings-group', "small_slider_content_{$i}" );
+    register_setting( 'small-slider-settings-group', "small_slider_image_{$i}" );
+    register_setting( 'small-slider-settings-group', "small_slider_url_{$i}" );
   }
 
 }
