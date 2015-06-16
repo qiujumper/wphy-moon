@@ -1,13 +1,21 @@
+<?php 
+if (get_option('show_featured_post')=='checked') {
+?>
 <div class="container">
   <div class="row image-block-area">
     <?php
       $feature_post_id = array(); 
-      $feature_post = ot_get_option('featured_post_1');
+      $feature_post_string = get_option('featured_post_id');
+      $feature_post = explode(' ',$feature_post_string);
+
       foreach ($feature_post as $key => $value) {
         $feature_post_ids[] = intval($value);
       }
-      $feature_post_query = new WP_Query( array( 'post_type' => 'post', 'post__in' => $feature_post_ids ) );
-
+      if (get_option('use_newest')=='checked') {
+        $feature_post_query = new WP_Query( array( 'post_type' => 'post', 'posts_per_page' => 3,'order'=>'DESC','orderby'=>'date') );
+      }else{
+        $feature_post_query = new WP_Query( array( 'post_type' => 'post', 'post__in' => $feature_post_ids,'ignore_sticky_posts' => true ) );
+      }
       if ( $feature_post_query->have_posts() ) {
         
         while ( $feature_post_query->have_posts() ) {
@@ -31,3 +39,6 @@
     
   </div>
 </div>
+<?php 
+}
+?>
