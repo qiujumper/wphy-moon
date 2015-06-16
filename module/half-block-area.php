@@ -1,19 +1,15 @@
 <?php 
-if (ot_get_option('show_block_2')=='on') {
+if (get_option('show_block_2')=='checked') {
 ?>
 <div class="container-fluid ">
   <div class="row half-block-area">
   <?php
-    for ($i=1; $i <3 ; $i++) {
+    for ($i=0; $i <2 ; $i++) {
       $data = array(); 
-      $block_title = 'block_2_'.$i.'_title';
-      $block_content = 'block_2_'.$i.'_content';
-      $block_link = 'block_2_'.$i.'_link';
-
       $data=array(
-        'title'=>ot_get_option($block_title),
-        'content'=>ot_get_option($block_content),
-        'link'=>ot_get_option($block_link)
+        'title'=>get_option("block_2_title_{$i}"),
+        'content'=>get_option("block_2_content_{$i}"),
+        'link'=>get_option("block_2_url_{$i}")
       );
       include(locate_template('module/half-block.php'));
      }     
