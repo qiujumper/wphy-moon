@@ -26,7 +26,7 @@
           <div class="theme-field">
             <div class="col-sm-2">链接</div>
             <div class="col-sm-10">
-              <input class="form-control" type="text" name='<?php echo "block_3_image_{$i}"; ?>' id='<?php echo "block_3_url_{$i}"; ?>' value='<?php echo get_option("block_3_url_{$i}"); ?>' />
+              <input class="form-control" type="text" name='<?php echo "block_3_url_{$i}"; ?>' id='<?php echo "block_3_url_{$i}"; ?>' value='<?php echo get_option("block_3_url_{$i}"); ?>' />
             </div>
           </div>
 

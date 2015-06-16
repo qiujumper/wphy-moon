@@ -78,6 +78,12 @@ function register_contact_settings() {
     register_setting( 'block-2-settings-group', "block_2_url_{$i}" );
   }
 
+  //register featured post setting
+  register_setting('featured-post-settings-group','show_featured_post');
+  register_setting('featured-post-settings-group','featured_post_id');
+  register_setting('featured-post-settings-group','use_newest');
+
+
 }
 
 
