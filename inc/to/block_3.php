@@ -14,7 +14,7 @@
     for ($i=0; $i <6 ; $i++) { 
       ?>
       <div class="row">
-        <div class="col-sm-6">
+        <div class="col-sm-5">
 
           <div class="theme-field">
             <div class="col-sm-2">标题</div>
@@ -41,10 +41,10 @@
           </div>
         </div>
 
-        <div class="col-sm-6">
+        <div class="col-sm-7">
           <div class="theme-field">
-            <div class="col-sm-2">内容</div>
-            <div class="col-sm-10">
+            <div class="col-sm-12">内容</div><br/>
+            <div class="col-sm-12">
               <?php wp_editor( get_option("block_3_content_{$i}"), "block_3_content_{$i}"); ?> 
             </div>
           </div>

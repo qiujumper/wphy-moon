@@ -83,7 +83,14 @@ function register_contact_settings() {
   register_setting('featured-post-settings-group','featured_post_id');
   register_setting('featured-post-settings-group','use_newest');
 
-
+  //register full width text setting
+  register_setting('full-width-text-settings-group','show_full_width');
+  register_setting('full-width-text-settings-group','show_full_width_button');
+  register_setting('full-width-text-settings-group','full_width_title');
+  register_setting('full-width-text-settings-group','full_width_content');
+  register_setting('full-width-text-settings-group','full_width_button_title');
+  register_setting('full-width-text-settings-group','full_width_button_content');
+  register_setting('full-width-text-settings-group','full_width_button_link');
 }
 
 
