@@ -21,7 +21,9 @@ jQuery(document).ready(function($){
     maxItems:3,
     move:1,
     controlNav:true,
-    directionNav:false
+    directionNav:true,
+    prevText:'',
+    nextText:''
   }); 
 
   //global hover effect for image
