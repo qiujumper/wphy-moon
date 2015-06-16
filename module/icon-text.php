@@ -3,6 +3,6 @@
   <div class="col-sm-10">
     <div class="title"><h3><?php echo $data['title']; ?></h3></div>
     <div class="content"><p><?php echo $data['content']; ?></p></div>
-    <div class="readmore"><a href="<?php echo $data['link']; ?>">查看详情<span class="glyphicon glyphicon-triangle-right"></span></a></div>
+    <div class="readmore"><a target="_blank" href="<?php echo $data['link']; ?>">查看详情<span class="glyphicon glyphicon-triangle-right"></span></a></div>
   </div>
 </div>

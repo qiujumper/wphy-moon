@@ -63,7 +63,7 @@ function register_contact_settings() {
   //register block 3 setting
   register_setting( 'block-3-settings-group', "show_block_3" );
 
-  for ($i=0; $i <10 ; $i++) { 
+  for ($i=0; $i <6 ; $i++) { 
     register_setting( 'block-3-settings-group', "block_3_title_{$i}" );
     register_setting( 'block-3-settings-group', "block_3_content_{$i}" );
     register_setting( 'block-3-settings-group', "block_3_image_{$i}" );
