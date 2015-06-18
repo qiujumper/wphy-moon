@@ -353,29 +353,50 @@ input[type="search"].search-field{
 
 .widget{
   margin-bottom:30px;
-  li{
-      border-bottom: 1px solid #efefef;
-      position: relative;
-      padding: 10px 0;
-      &:after{
-        font-family: "FontAwesome";
-        content: "\f105";
-        position: absolute;
-        top: 10px;
-        right: 0;
-        font-size: 14px;
-        color: #cccccc;
-      }
-    a{
-      display: block;
-      color: #777777;
+  background-color:white;
+  
+  h1{
+    padding:10px;
+    
+    margin-bottom:0px;
+    background-color: #f8f8f8;
+    font-size:18px;
+    &:before{
+      content:"\f039";
+      font-family: "FontAwesome";
+      margin-right:10px;
+
     }
   }
+  ul{
+    padding:10px;
+    padding-top:0px;
+    li{
+        border-bottom: 1px solid #efefef;
+        position: relative;
+        padding: 10px 0;
+        &:after{
+          font-family: "FontAwesome";
+          content: "\f105";
+          position: absolute;
+          top: 10px;
+          right: 0;
+          font-size: 14px;
+          color: #cccccc;
+        }
+      a{
+        display: block;
+        color: #777777;
+      }
+    }
+  }
+  
 }
 #primary{
   padding-top:60px;
   padding-left:60px;
   border-left: 1px solid #f9f9f9;
+  background-color:white;
   article{
     border-bottom:1px solid #efefef;
     margin-bottom:30px;
@@ -388,7 +409,7 @@ input[type="search"].search-field{
     margin-top:20px;
     margin-bottom:20px;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 23px;
   }
   .read-more{
     color:$green-blue;
@@ -408,6 +429,16 @@ input[type="search"].search-field{
       li{
         margin-left:5px;
       }
+      &.author:before{
+        font-family: 'FontAwesome';
+        content:"\f007";
+        margin-right:5px;
+      }
+      &.date:before{
+        font-family: 'FontAwesome';
+        content:"\f073";
+        margin-right:5px;
+      }
     }
   }
   .tag-cloud{
@@ -419,6 +450,11 @@ input[type="search"].search-field{
   .post-categories{
     display: inline;
     li{
+      &:first-child:before{
+        font-family: 'FontAwesome';
+        content:"\f02c";
+        margin-right:5px;
+      }
       float: left;
     }
   }

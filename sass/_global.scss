@@ -57,6 +57,12 @@ p{
   line-height: 27px;
   font-size:14px;
 }
+body{
+  &.home{
+    background-color:white;
+  }
+  background-color: #f1f1f1; 
+}
 a,a:visited{
   color:#404040;
   text-decoration: none;

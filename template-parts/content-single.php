@@ -12,9 +12,9 @@ if (has_post_thumbnail(get_the_ID())) {
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
 		<div class="meta-info">
-			<span><?php the_author(); ?> | </span>
-			<span><?php the_date('Y-m-d'); ?> | </span>
-			<span><?php the_category(); ?></span>
+			<span class="author"><?php the_author(); ?> | </span>
+			<span class="date"><?php the_date('Y-m-d'); ?> | </span>
+			<span> <?php the_category(); ?></span>
 			<div class="clearfix"></div>		
 		</div>
 	</header><!-- .entry-header -->
