@@ -1,8 +1,8 @@
 <?php
 /**
- * wphy-sun functions and definitions
+ * wphy_moon functions and definitions
  *
- * @package wphy-sun
+ * @package wphy_moon
  */
 require get_template_directory() . '/inc/helper.php';
 require get_template_directory() . '/inc/wp_bootstrap_navwalker.php';
@@ -22,10 +22,10 @@ function wphy_moon_setup() {
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on wphy-sun, use a find and replace
-	 * to change 'wphy-sun' to the name of your theme in all the template files
+	 * If you're building a theme based on wphy_moon, use a find and replace
+	 * to change 'wphy_moon' to the name of your theme in all the template files
 	 */
-	load_theme_textdomain( 'wphy-sun', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'wphy_moon', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -47,7 +47,7 @@ function wphy_moon_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary Menu', 'wphy-sun' ),
+		'primary' => esc_html__( 'Primary Menu', 'wphy_moon' ),
 	) );
 
 	/*
@@ -102,7 +102,7 @@ add_action( 'after_setup_theme', 'wphy_moon_content_width', 0 );
  */
 function wphy_moon_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'wphy-sun' ),
+		'name'          => esc_html__( 'Sidebar', 'wphy_moon' ),
 		'id'            => 'sidebar-1',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -123,13 +123,13 @@ function wphy_moon_scripts() {
 	 wp_enqueue_style( 'wphy-animate-style', get_template_directory_uri().'/css/animate.css' );
 
 
-	wp_enqueue_style( 'wphy-sun-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'wphy_moon-style', get_stylesheet_uri() );
 	wp_enqueue_script( 'wphy-bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '1.0.0', true );
 	wp_enqueue_script( 'wphy-flexslider-js', get_template_directory_uri() . '/js/jquery.flexslider-min.js', array('jquery'), '1.0.0', true );
 
-	wp_enqueue_script( 'wphy-sun-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
+	wp_enqueue_script( 'wphy_moon-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
-	wp_enqueue_script( 'wphy-sun-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+	wp_enqueue_script( 'wphy_moon-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 	wp_enqueue_script( 'wphy-js', get_template_directory_uri() . '/wphy.js', array('jquery','wphy-flexslider-js'), '1.0.0', true );
 
 

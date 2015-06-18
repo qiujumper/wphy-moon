@@ -11,7 +11,7 @@
 	</a>
 	<?php endif; // End header image check. ?>
  *
- * @package wphy-sun
+ * @package wphy_moon
  */
 
 /**

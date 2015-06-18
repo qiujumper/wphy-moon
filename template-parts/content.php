@@ -2,7 +2,7 @@
 /**
  * Template part for displaying posts.
  *
- * @package wphy-sun
+ * @package wphy_moon
  */
 
 ?>
@@ -35,7 +35,7 @@ if (has_post_thumbnail(get_the_ID())) {
 			echo '<a class="read-more" href=".get_permalink()." target="_blank" >查看详情</a>';
 		
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wphy-sun' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wphy_moon' ),
 				'after'  => '</div>',
 			) );
 		?>

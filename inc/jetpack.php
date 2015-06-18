@@ -3,7 +3,7 @@
  * Jetpack Compatibility File
  * See: https://jetpack.me/
  *
- * @package wphy-sun
+ * @package wphy_moon
  */
 
 /**

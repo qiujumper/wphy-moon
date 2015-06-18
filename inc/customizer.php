@@ -1,8 +1,8 @@
 <?php
 /**
- * wphy-sun Theme Customizer
+ * wphy_moon Theme Customizer
  *
- * @package wphy-sun
+ * @package wphy_moon
  */
 
 /**

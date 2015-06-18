@@ -2,7 +2,7 @@
 /**
  * The template for displaying all single posts.
  *
- * @package wphy-sun
+ * @package wphy_moon
  */
 
 get_header();
