@@ -17,7 +17,7 @@ get_sidebar();
 
 			<section class="error-404 not-found">
 				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'wphy_moon' ); ?></h1>
+					<h1 class="page-title"><?php esc_html_e( '抱歉,页面没找到.', 'wphy_moon' ); ?></h1>
 				</header><!-- .page-header -->
 
 				<div class="page-content">
@@ -29,7 +29,7 @@ get_sidebar();
 
 					<?php if ( wphy_moon_categorized_blog() ) : // Only show the widget if site has multiple categories. ?>
 					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'wphy_moon' ); ?></h2>
+						<h2 class="widget-title"><?php esc_html_e( '热门分类', 'wphy_moon' ); ?></h2>
 						<ul>
 						<?php
 							wp_list_categories( array(
