@@ -22,6 +22,13 @@ if (has_post_thumbnail(get_the_ID())) {
 
 	</header><!-- .entry-header -->
 
+	<div class="meta-info">
+		<span class="author"><?php the_author(); ?> | </span>
+		<span class="date"><?php the_date('Y-m-d'); ?> | </span>
+		<span><?php the_category(); ?></span>
+		<div class="clearfix"></div>		
+	</div>
+
 	<div class="entry-content">
 		<?php
 			echo chinese_excerpt(get_the_excerpt());
@@ -34,12 +41,7 @@ if (has_post_thumbnail(get_the_ID())) {
 		?>
 	</div><!-- .entry-content -->
 
-	<div class="meta-info">
-		<span><?php the_author(); ?> | </span>
-		<span><?php the_date('Y-m-d'); ?> | </span>
-		<span><?php the_category(); ?></span>
-		<div class="clearfix"></div>		
-	</div>
+	
 	<div class="tag-cloud"><?php the_tags('','',''); ?></div>
 
 </article><!-- #post-## -->

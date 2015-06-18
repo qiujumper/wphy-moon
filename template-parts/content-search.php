@@ -21,7 +21,7 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-summary">
-		<?php the_excerpt(); ?>
+		<?php echo chinese_excerpt(get_the_excerpt()); ?>
 	</div><!-- .entry-summary -->
 
 	<footer class="entry-footer">
