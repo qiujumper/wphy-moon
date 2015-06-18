@@ -490,6 +490,36 @@ input[type="search"].search-field{
     }
   }
 }
+
+.comment-list{
+  .comment-body{
+    margin-bottom:20px;
+  }
+  .comment-author{
+    &:before{
+      content:"\f075";
+      font-family: 'FontAwesome';
+    }
+    background-color: #f1f1f1;
+    font-size:14px;
+    padding:7px;
+    color:#777;
+  }
+  .comment_text{
+    padding:20px; 
+    background-color: #f8f8f8;
+  }
+  .comment-reply-link{
+    background: #1cbac8;
+  border-color: #1cbac8;
+  color: white;
+  font-weight: bold;
+  padding: 5px;
+  box-shadow: none;
+  border: 0px;
+  font-size: 12px;
+  }
+}
 /*==========  Non-Mobile First Method  ==========*/
 
     /* Large Devices, Wide Screens */
