@@ -436,6 +436,9 @@ input[type="search"].search-field{
     margin-bottom:20px;
     font-weight: bold;
     font-size: 23px;
+    padding-bottom:10px;
+    border-bottom:1px solid #f1f1f1;
+
   }
   .read-more{
     color:$green-blue;
@@ -518,6 +521,36 @@ input[type="search"].search-field{
   box-shadow: none;
   border: 0px;
   font-size: 12px;
+  }
+}
+
+#commentform{
+  padding-bottom:20px;
+  label{
+    display: block;
+    margin:0px;
+  }
+  p{
+    margin:0px;
+  }
+
+  input[type="text"],input[type="email"],input[type="url"],textarea {
+    padding: 8px 1.8%;
+    width: 96%;
+    border: 1px solid #eee;
+    font-size: 14px;
+    background: #fcfcfc;
+  }
+  .form-submit{
+    margin-top:10px;
+  }
+}
+
+#menu-top-menu{
+  .menu-item{
+    a{
+      font-size:15px;
+    }
   }
 }
 /*==========  Non-Mobile First Method  ==========*/
