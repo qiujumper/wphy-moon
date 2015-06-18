@@ -9,8 +9,12 @@ body ::-moz-selection {
     color:white;
     background-color:$green-blue;
     text-shadow:none;
+
 }
 
+body{
+  font-size:14px;
+}
 ul,li{
   list-style-type: none;
   padding:0px;
@@ -95,7 +99,7 @@ button,#submit,button:hover,input[type="button"]:hover, input[type="reset"]:hove
   padding: 9px;
   box-shadow: none;
   border: 0px;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 

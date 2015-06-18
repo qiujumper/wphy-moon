@@ -406,6 +406,7 @@ input[type="search"].search-field{
       a{
         display: block;
         color: #777777;
+        font-size:15px;
       }
     }
   }
@@ -420,12 +421,12 @@ input[type="search"].search-field{
   border-left: 1px solid #f9f9f9;
   background-color:white;
   article{
-    border-bottom:1px solid #efefef;
     margin-bottom:30px;
     padding-bottom:25px;
 
     .entry-content{
       margin-bottom:20px;
+      color:#777;
     }
   }
   .feature-image img{
