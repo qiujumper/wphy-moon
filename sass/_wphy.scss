@@ -372,7 +372,6 @@ input[type="search"].search-field{
 
 .widget{
   margin-bottom:30px;
-  background-color:white;
   
   h1{
     padding:10px;
@@ -388,25 +387,30 @@ input[type="search"].search-field{
     }
   }
   ul{
-    padding:10px;
+    
     padding-top:0px;
     li{
         border-bottom: 1px solid #efefef;
         position: relative;
-        padding: 10px 0;
+        padding: 10px;
+        padding-right:15px;
+
+        &:hover{
+          background-color: #f8f8f8;
+        }
         &:after{
           font-family: "FontAwesome";
           content: "\f105";
           position: absolute;
           top: 10px;
-          right: 0;
+          right: 10px;
           font-size: 14px;
           color: #cccccc;
         }
       a{
         display: block;
         color: #777777;
-        font-size:15px;
+        font-size:14px;
       }
     }
   }
@@ -416,17 +420,18 @@ input[type="search"].search-field{
   padding:10px;
 }
 #primary{
-  padding-top:45px;
-  padding-left:60px;
-  border-left: 1px solid #f9f9f9;
-  background-color:white;
+  margin-top:60px;  
+  
   article{
     margin-bottom:30px;
-    padding-bottom:25px;
-
+    
+    background-color:white;
     .entry-content{
       margin-bottom:20px;
       color:#777;
+    }
+    .article-info-area{
+      padding:25px;
     }
   }
   .feature-image img{
@@ -475,7 +480,9 @@ input[type="search"].search-field{
   .tag-cloud{
     a{
       border-color:$green-blue;
-      color:$green-blue;
+      background-color:$green-blue;
+      color:white;
+      padding:1px 6px;
     }
   }
   .post-categories{

@@ -34,7 +34,7 @@ function get_feature_image_by_id($post_id,$size = 'full', $all=false){
 
 function chinese_excerpt($text, $lenth=100) {
 $text = mb_substr($text,0, $lenth);
- return $text.'...';
+ return $text.' [...]';
 }
 add_filter('the_excerpt', ' chinese_excerpt ');
 

@@ -17,6 +17,7 @@ if (has_post_thumbnail(get_the_ID())) {
 <?php 
 }
 ?>
+	<div class="article-info-area">
 	<header class="entry-header">
 		<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 
@@ -32,7 +33,7 @@ if (has_post_thumbnail(get_the_ID())) {
 	<div class="entry-content">
 		<?php
 			echo chinese_excerpt(get_the_excerpt());
-			echo '<a class="read-more" href=".get_permalink()." target="_blank" >查看详情</a>';
+			echo '&nbsp;&nbsp;<a class="read-more" href=".get_permalink()." target="_blank" >>> 查看详情</a>';
 		
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wphy_moon' ),
@@ -43,5 +44,5 @@ if (has_post_thumbnail(get_the_ID())) {
 
 	
 	<div class="tag-cloud"><?php the_tags('','',''); ?></div>
-
+	</div>
 </article><!-- #post-## -->
