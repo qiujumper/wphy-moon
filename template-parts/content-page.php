@@ -5,11 +5,25 @@
  * @package wphy_moon
  */
 
-?>
 
+if (has_post_thumbnail(get_the_ID())) {
+?>
+	<div class="feature-image">
+		<img src="<?php echo get_feature_image_by_id(get_the_ID()); ?>" alt="<?php the_title(); ?>" class="animated" >
+	</div>
+<?php 
+}
+?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<?php include(locate_template('module/share-button.php')); ?> 
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<div class="meta-info">
+			<span class="author"><?php the_author(); ?> | </span>
+			<span class="date"><?php the_date('Y-m-d'); ?> | </span>
+			<span> <?php the_category(); ?></span>
+			<div class="clearfix"></div>		
+		</div>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">

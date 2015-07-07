@@ -5,18 +5,19 @@
  * @package wphy_moon
  */
 
-?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-<?php 
 if (has_post_thumbnail(get_the_ID())) {
-?>
+	?>
 	<div class="feature-image">
 		<img src="<?php echo get_feature_image_by_id(get_the_ID()); ?>" alt="<?php the_title(); ?>" class="animated" >
 	</div>
 <?php 
 }
 ?>
+
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<?php include(locate_template('module/share-button.php')); ?> 
+
 	<div class="article-info-area">
 	<header class="entry-header">
 		<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>

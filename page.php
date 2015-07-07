@@ -8,7 +8,6 @@ get_sidebar();
 
 	<div id="primary" class="content-area col-sm-9 ">
 		<main id="main" class="site-main detail-page" role="main">
-			<?php include(locate_template('module/share-button.php')); ?> 
 
 			<?php while ( have_posts() ) : the_post(); ?>
 

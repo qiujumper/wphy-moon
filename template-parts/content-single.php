@@ -1,4 +1,3 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 <?php 
 if (has_post_thumbnail(get_the_ID())) {
 ?>
@@ -8,6 +7,9 @@ if (has_post_thumbnail(get_the_ID())) {
 <?php 
 }
 ?>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<?php include(locate_template('module/share-button.php')); ?> 
+
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
