@@ -31,7 +31,13 @@
 .navbar{
   margin-bottom:0px;
 }
-
+.dropdown-menu{
+  background-color:#101010;
+  color:#fff;
+  &>li>a{
+    color:#9d9d9d;
+  }
+}
 .navbar-toggle{
   
   color:#7a828f;
@@ -320,6 +326,7 @@
   }
 }
 .page-header{
+  padding-bottom:0px;
   text-align: center;
     background: #f9f9f9;
   border-bottom: 0 none #efefef;
@@ -356,20 +363,26 @@ input[type="search"].search-field{
       width:70%;
       margin:0px;
     }
-    .search-submit{
-      display: inline;
-       background: #1cbac8;
-  border-color: #1cbac8;
-  color: white;
-  font-weight: bold;
-  padding: 7px;
-  box-shadow: none;
-  border: 0px;
-  font-size: 15px;
-    }
+
   }
 }
+  .search-submit{
+    position:relative;
+    top:2px;
+    display: inline;
+     background: #1cbac8;
+    border-color: #1cbac8;
+    color: white;
+    font-weight: bold;
+    padding: 7px;
+    box-shadow: none;
+    border: 0px;
+    font-size: 15px;
+  }
 
+  .widget_search .search-submit {
+    display: inline;
+  }
 .widget{
   margin-bottom:30px;
   
@@ -421,7 +434,12 @@ input[type="search"].search-field{
 }
 #primary{
   margin-top:60px;  
-  
+  .detail-page{
+    article{
+      padding:30px; 
+      padding-top:15px;
+    }
+  }
   article{
     margin-bottom:30px;
     
@@ -432,6 +450,7 @@ input[type="search"].search-field{
     }
     .article-info-area{
       padding:25px;
+      padding-top:1px;
     }
   }
   .feature-image img{
@@ -440,7 +459,7 @@ input[type="search"].search-field{
   .entry-title{
     margin-top:20px;
     margin-bottom:20px;
-    font-weight: bold;
+    font-weight: normal;
     font-size: 23px;
     padding-bottom:10px;
     border-bottom:1px solid #f1f1f1;
@@ -561,6 +580,14 @@ input[type="search"].search-field{
     }
   }
 }
+
+.jiathis_style{
+  position: absolute;
+  right: 30px;
+  top: 10px;
+}
+
+
 /*==========  Non-Mobile First Method  ==========*/
 
     /* Large Devices, Wide Screens */
