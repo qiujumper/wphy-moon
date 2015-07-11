@@ -27,6 +27,10 @@ button{
   overflow:hidden;
 }
 
+.limiter{
+  margin:0 auto;
+  max-width:1170px;
+}
 h1,h2,h3,h4,h5,h6{
   margin-top:10px;
   margin-bottom:10px;
@@ -105,7 +109,16 @@ button,#submit,button:hover,input[type="button"]:hover, input[type="reset"]:hove
 
 
 
-
+.bg-full-width{
+  background-size:cover;                    
+  background-repeat: no-repeat;
+  background-position: center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed; 
+}
 
 
 

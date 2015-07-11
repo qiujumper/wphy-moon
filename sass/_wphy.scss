@@ -385,7 +385,7 @@ input[type="search"].search-field{
   }
 .widget{
   margin-bottom:30px;
-  
+  background-color: #fcfcfc;
   h1{
     padding:10px;
     
@@ -557,6 +557,7 @@ input[type="search"].search-field{
   label{
     display: block;
     margin:0px;
+    text-indent: 3px;
   }
   p{
     margin:0px;
@@ -588,6 +589,40 @@ input[type="search"].search-field{
   top: 10px;
 }
 
+.intro-block{
+  .bg-image {
+    .option-blocks{
+      padding-top:150px;
+      padding-bottom:150px;
+      padding-left:100px;
+      padding-right:10px;
+
+      .option-block{
+        cursor:pointer;
+        width:200px;
+        height:200px;
+        padding-top:55px;
+        background-color: pink;
+        float:left;       
+        
+        font-size: 20px;
+        text-align: center;
+        color:white;
+
+        a{
+          color:white;
+          &:hover{
+            opacity: 1;
+          }
+        }
+        .fa{
+          font-size:55px;
+        }
+
+      }
+    }
+  }
+}
 
 /*==========  Non-Mobile First Method  ==========*/
 

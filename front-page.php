@@ -6,7 +6,8 @@ include(locate_template('module/slider.php'));
   <div class="container-fulid ">
     <main id="main" class="site-main" role="main">
 
-    <?php 
+    <?php
+    include(locate_template('module/intro-page.php')); 
     include(locate_template('module/icon-text-area.php'));
     include(locate_template('module/half-block-area.php'));
     include(locate_template('module/image-block-area.php'));

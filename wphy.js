@@ -31,5 +31,13 @@ jQuery(document).ready(function($){
     $(this).addClass('pulse');
   }, function() {
     $(this).removeClass('pulse');
-  });  
+  }); 
+
+  $('.option-block').hover(function() {
+    $(this).addClass('bounce');
+  }, function() {
+    $(this).removeClass('bounce');
+  }); 
+
+
 });
