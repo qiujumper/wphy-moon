@@ -154,21 +154,25 @@
   .image-block{
     .image{
       position:relative;
+      img{
+        width:100%;
+      }
       &:hover{
         .img-title{
-          display: block;
+          
+
+          
         }
       }
       .img-title{
+        padding:50px;
         position:absolute;
         width:100%;
         height: 100%;
         top:0px;
-        padding:5px;
         font-size: 20px;
-        background-color: $green-blue;
-        color:white;
-        opacity:0.6;
+        background-color: rgba(34, 167, 240,0.8);
+        color:white;        
         display: none;
       }
      
@@ -621,6 +625,13 @@ input[type="search"].search-field{
 
       }
     }
+  }
+}
+
+.icon-text-block-area{
+  padding-top:50px;
+  .content{
+    min-height:90px;
   }
 }
 

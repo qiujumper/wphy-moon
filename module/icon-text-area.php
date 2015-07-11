@@ -1,7 +1,7 @@
 <?php 
 if (get_option('show_block_3')=='checked') {
 ?>
-<div class="container">
+<div class="container icon-text-block-area">
   <div class="icon-text-area row no-gutters">
     <?php
     for ($i=0; $i <6 ; $i++) {

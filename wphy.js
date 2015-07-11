@@ -39,5 +39,10 @@ jQuery(document).ready(function($){
     $(this).removeClass('bounce');
   }); 
 
-
+  
+  $('.image-block .image').hover(function() {
+    $(this).find('.img-title').fadeIn();
+  }, function() {
+    $(this).find('.img-title').fadeOut();
+  }); 
 });
