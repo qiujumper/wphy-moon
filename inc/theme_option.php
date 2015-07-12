@@ -29,7 +29,7 @@ function register_contact_settings() {
   
   add_option('tel','021-1234567');
   add_option('email','wordpresshy@126.com');
-  add_option('qq','41551722');
+  add_option('qq','406758623');
   add_option('qq_group','348046974');
   add_option('weixin','wordpresshy');
   add_option('weibo','iqiujumper');
@@ -100,6 +100,16 @@ function register_contact_settings() {
     register_setting( 'text-block-settings-group', "text_block_title_{$i}" );
     register_setting( 'text-block-settings-group', "text_block_content_{$i}" );
   }
+
+  //register intro block setting
+  register_setting( 'intro-block-settings-group', "show_intro_block" );
+
+  for ($i=0; $i <9 ; $i++) { 
+    register_setting( 'intro-block-settings-group', "intro_block_title_{$i}" );
+    register_setting( 'intro-block-settings-group', "intro_block_icon_{$i}" );
+    register_setting( 'intro-block-settings-group', "intro_block_url_{$i}" );
+  }
+
 }
 
 
@@ -136,6 +146,7 @@ function theme_option_html_wphy() {
     <li role="presentation"><a href="#featurepost" aria-controls="featurepost" role="tab" data-toggle="tab">首页特色文章</a></li>
     <li role="presentation"><a href="#fullwidth" aria-controls="fullwidth" role="tab" data-toggle="tab">首页文案</a></li>
     <li role="presentation"><a href="#textblock" aria-controls="textblock" role="tab" data-toggle="tab">首页文字区块</a></li>
+    <li role="presentation"><a href="#intro" aria-controls="intro" role="tab" data-toggle="tab">首页介绍区块</a></li>
   </ul>
 
   <!-- Tab panes -->
@@ -148,6 +159,7 @@ function theme_option_html_wphy() {
     <div role="tabpanel" class="tab-pane fade" id="featurepost"><?php require get_template_directory() . '/inc/to/feature_post.php'; ?></div>
     <div role="tabpanel" class="tab-pane fade" id="fullwidth"><?php require get_template_directory() . '/inc/to/full_width_block.php'; ?></div>
     <div role="tabpanel" class="tab-pane fade" id="textblock"><?php require get_template_directory() . '/inc/to/text_area.php'; ?></div>
+    <div role="tabpanel" class="tab-pane fade" id="intro"><?php require get_template_directory() . '/inc/to/intro.php'; ?></div>
 
   </div>
 
