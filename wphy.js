@@ -57,4 +57,9 @@ jQuery(document).ready(function($){
   }, function() {
     $(this).find('.img-title').fadeOut();
   }); 
+
+  $('.scroll-top').click(function() {
+    $("html, body").animate({ scrollTop: 0 }, "slow");
+    return false;
+  });
 });

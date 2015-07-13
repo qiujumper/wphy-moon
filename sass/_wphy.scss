@@ -679,6 +679,28 @@ input[type="search"].search-field{
   margin-bottom:20px;
 }
 
+.scroll-top{
+  z-index: 999;
+  background-color: black;
+  color:white;
+  position: fixed;
+  bottom:40px;
+  right:40px;
+  cursor: pointer;
+  padding-top:2px;
+  font-size:23px;
+  width:40px;
+  height:40px;
+  text-align: center;
+  line-height:45px;
+  &:hover{
+    opacity:0.8;
+  }
+  a{
+    color:white;
+  }
+}
+
 /*==========  Non-Mobile First Method  ==========*/
 
     /* Large Devices, Wide Screens */

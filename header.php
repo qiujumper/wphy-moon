@@ -19,9 +19,13 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div class="wphy site container-fluid">
+<div class="wphy site container-fluid" id="top">
   
-
+<div class="scroll-top">
+  <a href="#top" target="_self">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+</div>
 	<header class="site-header " role="banner">
 		<div class="site-branding row">
     
