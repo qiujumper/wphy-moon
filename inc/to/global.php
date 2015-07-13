@@ -10,10 +10,19 @@
       <div class="col-md-12 theme-field">
         <span>是否开启'案例展示'</span> &nbsp;&nbsp;&nbsp;<input type="checkbox"  id="show_case" name="show_case" <?php echo get_option("show_case"); ?> value="checked">
       </div>
+
+      <div class="col-md-12 theme-field">
+        <span>案例数目</span> &nbsp;&nbsp;&nbsp;<input class="" type="text" name='<?php echo "case_num"; ?>' id='<?php echo "case_num"; ?>' value='<?php echo get_option("case_num"); ?>' />
+
+      </div>
+
       <div class="col-md-12 theme-field">
         <span>'案例展示'类型</span> &nbsp;&nbsp;&nbsp;<?php print_type_field(); ?>
       </div>
     </div>
+    <br/>
+    <hr/>
+    <br/>
    
     <?php
         submit_button();

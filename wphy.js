@@ -26,6 +26,18 @@ jQuery(document).ready(function($){
     nextText:''
   }); 
 
+  $('.image-block-slide').hover(function() {
+    $(this).find('img').addClass('pulse');
+    $(this).find('.info').stop(true,false).show();
+    $(this).find('.info').find('.title').addClass('slideInUp');
+    $(this).find('.info').find('.content').addClass('slideInUp');
+  }, function() {
+    $(this).find('img').removeClass('pulse');
+    $(this).find('.info').stop(true,false).hide();
+    $(this).find('.info').find('.title').removeClass('slideInUp');
+    $(this).find('.info').find('.content').removeClass('slideInUp');
+  });
+
   //global hover effect for image
   $('img').hover(function() {
     $(this).addClass('pulse');

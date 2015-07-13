@@ -15,6 +15,8 @@ include(locate_template('module/slider.php'));
     include(locate_template('module/text-block-area.php'));
     include(locate_template('module/image-post-slider.php'));
     include(locate_template('module/button-text.php'));
+    include(locate_template('module/case-area.php'));
+
     ?>
 
     </main><!-- #main -->
