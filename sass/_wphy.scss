@@ -53,7 +53,7 @@
 }
 .flexslider{
   border:0px;
-  max-height: 800px;
+  max-height: 600px;
   overflow: hidden;
   .flex-direction-nav a{
     top:40%;
@@ -63,13 +63,13 @@
     
    }
   .slides{
-    max-height: 800px;
+    max-height: 600px;
 
     li{
       a:hover{
         opacity:1;
       }
-      max-height: 800px;
+      max-height: 600px;
       //position:relative;
       .info{
         position: absolute;
@@ -79,19 +79,19 @@
 
         .title{
           margin-bottom: 20px;
-          font-size:40px;
-          background-color: #1cbac8;
+          font-size:35px;
+          background-color: rgba(25, 181, 254, 0.8);
           
-          padding:9px;
+          padding:11px;
           
           color:white;
         }
 
         .content{
           
-          font-size: 25px;
-          background-color: #1cbac8;
-          padding:9px;
+          font-size: 20px;
+          background-color: rgba(25, 181, 254, 0.8);
+          padding:11px;
           color:white;
         }
       }

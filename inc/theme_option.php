@@ -25,6 +25,7 @@ function register_contact_settings() {
   register_setting( 'contact-settings-group', 'qc' );
   register_setting( 'contact-settings-group', 'address' );
   register_setting( 'contact-settings-group', 'about_us' );
+  register_setting( 'contact-settings-group', 'show_team' );
 
   
   add_option('tel','021-1234567');
@@ -110,6 +111,13 @@ function register_contact_settings() {
     register_setting( 'intro-block-settings-group', "intro_block_url_{$i}" );
   }
 
+  register_setting( 'global-settings-group', "show_case" );
+  register_setting( 'global-settings-group', "case_type" );
+  register_setting( 'global-settings-group', "case_num" );
+  register_setting( 'global-settings-group', "rr" );
+  register_setting( 'global-settings-group', "ee" );
+
+
 }
 
 
@@ -137,7 +145,9 @@ function theme_option_html_wphy() {
 
   <!-- Nav tabs -->
   <ul class="nav nav-tabs" role="tablist">
-    <li role="presentation" class="active"><a href="#slider" aria-controls="slider" role="tab" data-toggle="tab">幻灯片</a></li>
+    <li role="presentation" class="active"><a href="#golbal" aria-controls="golbal" role="tab" data-toggle="tab">全局设置</a></li>
+
+    <li role="presentation"><a href="#slider" aria-controls="slider" role="tab" data-toggle="tab">幻灯片</a></li>
 
     <li role="presentation" ><a href="#contact" aria-controls="contact" role="tab" data-toggle="tab">联系方式</a></li>
     <li role="presentation"><a href="#smallslider" aria-controls="smallslider" role="tab" data-toggle="tab">小幻灯片</a></li>
@@ -151,8 +161,10 @@ function theme_option_html_wphy() {
 
   <!-- Tab panes -->
   <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="global"><?php require get_template_directory() . '/inc/to/global.php'; ?></div>
+
     <div role="tabpanel" class="tab-pane fade" id="contact"><?php require get_template_directory() . '/inc/to/contact.php'; ?></div>
-    <div role="tabpanel" class="tab-pane active" id="slider"><?php require get_template_directory() . '/inc/to/slider.php'; ?></div>
+    <div role="tabpanel" class="tab-pane fade" id="slider"><?php require get_template_directory() . '/inc/to/slider.php'; ?></div>
     <div role="tabpanel" class="tab-pane fade" id="smallslider"><?php require get_template_directory() . '/inc/to/small_slider.php'; ?></div>
     <div role="tabpanel" class="tab-pane fade" id="block3"><?php require get_template_directory() . '/inc/to/block_3.php'; ?></div>
     <div role="tabpanel" class="tab-pane fade" id="block2"><?php require get_template_directory() . '/inc/to/block_2.php'; ?></div>

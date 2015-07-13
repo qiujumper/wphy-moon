@@ -102,7 +102,22 @@ jQuery(document).ready(function($){
 }
 
 
-
+/**
+ * use to print the selection field for all type in wordpress
+ */
+function print_type_field($option_slug='case_type'){
+  $post_types = get_post_types();
+  $type_option = '';
+  foreach ($post_types as $key => $value) {
+    if(get_option($option_slug)==$value){
+      $type_option.="<option value='{$value}' selected>{$value}</option>";
+    }else{
+      $type_option.="<option value='{$value}'>{$value}</option>";
+    }
+    
+  }
+  echo "<select class='{$option_slug}' name='{$option_slug}' id='{$option_slug}' value='".get_option($option_slug)."' >".$type_option."</select>";
+}
 
 
 

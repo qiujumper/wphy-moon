@@ -5,7 +5,21 @@
 <form method="post" action="options.php">
     <?php settings_fields( 'contact-settings-group' ); ?>
     <?php do_settings_sections( 'contact-settings-group' ); ?>
+    <div class="checkbox">
+      <p class="bg-warning is_show">
+        <span>是否开启</span> <input type="checkbox"  id="show_intro_block" name="show_intro_block" <?php echo get_option("show_intro_block"); ?> value="checked">
+      </p>
+    </div><br/>
+
     <table class="form-table table table-striped">
+
+      <tr>
+        <td>是否显示团队成员</td>
+        <td>  
+          <input type="checkbox"  id="show_team" name="show_team" <?php echo get_option("show_team"); ?> value="checked">
+        </td>
+      </tr>
+
       <tr>
       <td>电话号码</td>
         <td>
