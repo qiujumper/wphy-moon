@@ -8,7 +8,6 @@ if (has_post_thumbnail(get_the_ID())) {
 }
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php include(locate_template('module/share-button.php')); ?> 
 
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
@@ -23,6 +22,7 @@ if (has_post_thumbnail(get_the_ID())) {
 
 	<div class="entry-content">
 		<?php the_content(); ?>
+		<?php include(locate_template('module/share-button.php')); ?> 
 		<?php
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wphy_moon' ),

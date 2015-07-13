@@ -16,7 +16,6 @@ if (has_post_thumbnail(get_the_ID())) {
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php include(locate_template('module/share-button.php')); ?> 
 
 	<div class="article-info-area">
 	<header class="entry-header">

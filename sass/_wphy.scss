@@ -333,6 +333,8 @@
     background: #f9f9f9;
   border-bottom: 0 none #efefef;
   color:#777;
+  padding:20px;
+  
   margin:0px;
   .page-title{
     margin:0px;
@@ -586,9 +588,7 @@ input[type="search"].search-field{
 }
 
 .jiathis_style{
-  position: absolute;
-  right: 30px;
-  top: 10px;
+  overflow:hidden;
 }
 
 .intro-block{
@@ -662,6 +662,9 @@ input[type="search"].search-field{
     margin:0 auto;
     line-height: 23px;
   }
+}
+.show-case{
+  margin-bottom:40px;
 }
 
 /*==========  Non-Mobile First Method  ==========*/
