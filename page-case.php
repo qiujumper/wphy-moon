@@ -16,13 +16,13 @@ get_header();
     <?php 
     $args_case = array(
       'post_type' => get_option('case_type'),
-      'posts_per_page' =>-1
+      'posts_per_page' =>20
     );
 
-    $query_case = new WP_Query($args_case);
-    if ($query_case->have_posts()) {
-      while($query_case->have_posts()){
-        $query_case->the_post();
+    $wp_query = new WP_Query($args_case);
+    if ($wp_query->have_posts()) {
+      while($wp_query->have_posts()){
+        $wp_query->the_post();
         $data=array();
         $data=array(
           'title'=>get_the_title(),
