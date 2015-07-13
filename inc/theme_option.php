@@ -114,7 +114,7 @@ function register_contact_settings() {
   register_setting( 'global-settings-group', "show_case" );
   register_setting( 'global-settings-group', "case_type" );
   register_setting( 'global-settings-group', "case_num" );
-  register_setting( 'global-settings-group', "rr" );
+  register_setting( 'global-settings-group', "analytic" );
   register_setting( 'global-settings-group', "ee" );
 
 

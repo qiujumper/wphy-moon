@@ -23,7 +23,12 @@
     <br/>
     <hr/>
     <br/>
-   
+    <div class="col-md-12 theme-field">
+    <span>统计代码</span>(全部的统计代码都可贴在这里)<br/><br/>
+    <textarea rows="20" cols="150" name="analytic" id="analytic" >
+      <?php echo get_option('analytic'); ?>
+    </textarea>
+    </div>
     <?php
         submit_button();
       ?>

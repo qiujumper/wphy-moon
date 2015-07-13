@@ -140,17 +140,17 @@ if ( ! function_exists( 'the_archive_title' ) ) :
  */
 function the_archive_title( $before = '', $after = '' ) {
 	if ( is_category() ) {
-		$title = sprintf( esc_html__( 'Category: %s', 'wphy_moon' ), single_cat_title( '', false ) );
+		$title = sprintf( esc_html__( '分类: %s', 'wphy_moon' ), single_cat_title( '', false ) );
 	} elseif ( is_tag() ) {
-		$title = sprintf( esc_html__( 'Tag: %s', 'wphy_moon' ), single_tag_title( '', false ) );
+		$title = sprintf( esc_html__( '标签: %s', 'wphy_moon' ), single_tag_title( '', false ) );
 	} elseif ( is_author() ) {
-		$title = sprintf( esc_html__( 'Author: %s', 'wphy_moon' ), '<span class="vcard">' . get_the_author() . '</span>' );
+		$title = sprintf( esc_html__( '作者: %s', 'wphy_moon' ), '<span class="vcard">' . get_the_author() . '</span>' );
 	} elseif ( is_year() ) {
-		$title = sprintf( esc_html__( 'Year: %s', 'wphy_moon' ), get_the_date( esc_html_x( 'Y', 'yearly archives date format', 'wphy_moon' ) ) );
+		$title = sprintf( esc_html__( '年: %s', 'wphy_moon' ), get_the_date( esc_html_x( 'Y', 'yearly archives date format', 'wphy_moon' ) ) );
 	} elseif ( is_month() ) {
-		$title = sprintf( esc_html__( 'Month: %s', 'wphy_moon' ), get_the_date( esc_html_x( 'F Y', 'monthly archives date format', 'wphy_moon' ) ) );
+		$title = sprintf( esc_html__( '月: %s', 'wphy_moon' ), get_the_date( esc_html_x( 'F Y', 'monthly archives date format', 'wphy_moon' ) ) );
 	} elseif ( is_day() ) {
-		$title = sprintf( esc_html__( 'Day: %s', 'wphy_moon' ), get_the_date( esc_html_x( 'F j, Y', 'daily archives date format', 'wphy_moon' ) ) );
+		$title = sprintf( esc_html__( '日: %s', 'wphy_moon' ), get_the_date( esc_html_x( 'F j, Y', 'daily archives date format', 'wphy_moon' ) ) );
 	} elseif ( is_tax( 'post_format' ) ) {
 		if ( is_tax( 'post_format', 'post-format-aside' ) ) {
 			$title = esc_html_x( 'Asides', 'post format archive title', 'wphy_moon' );
@@ -172,13 +172,13 @@ function the_archive_title( $before = '', $after = '' ) {
 			$title = esc_html_x( 'Chats', 'post format archive title', 'wphy_moon' );
 		}
 	} elseif ( is_post_type_archive() ) {
-		$title = sprintf( esc_html__( 'Archives: %s', 'wphy_moon' ), post_type_archive_title( '', false ) );
+		$title = sprintf( esc_html__( '归档: %s', 'wphy_moon' ), post_type_archive_title( '', false ) );
 	} elseif ( is_tax() ) {
 		$tax = get_taxonomy( get_queried_object()->taxonomy );
 		/* translators: 1: Taxonomy singular name, 2: Current taxonomy term */
 		$title = sprintf( esc_html__( '%1$s: %2$s', 'wphy_moon' ), $tax->labels->singular_name, single_term_title( '', false ) );
 	} else {
-		$title = esc_html__( 'Archives', 'wphy_moon' );
+		$title = esc_html__( '归档', 'wphy_moon' );
 	}
 
 	/**

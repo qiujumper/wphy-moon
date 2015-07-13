@@ -456,6 +456,7 @@ input[type="search"].search-field{
     .article-info-area{
       padding:25px;
       padding-top:1px;
+      padding-bottom:8px;
     }
   }
   .feature-image img{
@@ -699,6 +700,21 @@ input[type="search"].search-field{
   a{
     color:white;
   }
+}
+
+.page-links{
+  margin-top:10px;
+  .menu{
+    li{
+      float:left;
+      width:50%;
+    }
+  }
+}
+
+.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
+background-color:#1cbac8;
+
 }
 
 /*==========  Non-Mobile First Method  ==========*/
