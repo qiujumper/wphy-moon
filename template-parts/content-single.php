@@ -21,6 +21,65 @@ if (has_post_thumbnail(get_the_ID())) {
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
+		<div class="customed-field">
+        <?php  
+          if (get_field('plugin_name')) {
+        ?>
+          <div class="item">
+            <strong>插件名称 : </strong><?php the_field('plugin_name') ?>
+          </div>
+        <?php
+          }
+          
+          if (get_field('plugin_type')) {
+        ?>
+          <div class="item">
+            <strong>插件类型 : </strong><?php the_field('plugin_type') ?>
+          </div>
+        <?php
+          }
+          
+          if (get_field('down_url')) {
+        ?>
+          <div class="item">
+            <strong>下载地址 : </strong><a target="_blank" href="<?php the_field('down_url') ?>"><?php the_field('down_url') ?></a>
+          </div>
+        <?php
+          }
+          
+          if (get_field('url')) {
+        ?>
+          <div class="item">
+            <strong>预览地址 : </strong><a href="<?php the_field('url') ?>" target="_blank" ><?php the_field('url') ?></a>
+          </div>
+        <?php
+          }
+          
+          if (get_field('type')) {
+        ?>
+          <div class="item">
+            <strong>网站类型 : </strong><?php the_field('type') ?>
+          </div>
+        <?php
+          }
+         
+          if (get_field('design_name')) {
+        ?>
+          <div class="item">
+            <strong>网站作者 : </strong><a href="<?php the_field('design_url') ?>" target="_blank" ><?php the_field('design_name') ?></a>
+          </div>
+        <?php
+          }
+          
+          if (get_post_type($post_ID) == 'work') {            
+        ?>
+          <div class="item">
+            <strong>网站平台 : </strong>Wordpress
+          </div>
+        <?php
+          }
+        ?>        
+      </div>
 		<?php the_content(); ?>
 		<?php include(locate_template('module/share-button.php')); ?> 
 		<?php
