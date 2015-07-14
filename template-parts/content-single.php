@@ -22,8 +22,8 @@ if (has_post_thumbnail(get_the_ID())) {
 
 	<div class="entry-content">
 		<div class="customed-field">
-        <?php  
-          if (get_field('plugin_name')) {
+        <?php
+          if(get_field('plugin_name')){
         ?>
           <div class="item">
             <strong>插件名称 : </strong><?php the_field('plugin_name') ?>
@@ -76,6 +76,20 @@ if (has_post_thumbnail(get_the_ID())) {
           <div class="item">
             <strong>网站平台 : </strong>Wordpress
           </div>
+
+          <div class="item">
+            <strong>是否为响应式 : </strong><?php echo get_field('responsive'); ?>
+          </div>
+
+        <?php
+          }if(get_field('tech')){
+        ?>
+        <div class="item">
+            <strong>采用技术 : </strong>
+            <?php foreach (get_field('tech') as $key => $value) {
+              echo $value.', ';
+            } ?>
+        </div>
         <?php
           }
         ?>        
