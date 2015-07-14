@@ -21,7 +21,7 @@
       </div>
       <div class="searcharea"><br/>
         <?php 
-          get_search_form(true);
+          get_search_form_wphy(true);
         ?>
       </div>
     </div>
