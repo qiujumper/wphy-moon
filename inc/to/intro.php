@@ -12,7 +12,7 @@
       </p>
     </div><br/>
     <?php
-    for ($i=0; $i <9 ; $i++) { 
+    for ($i=0; $i <10 ; $i++) { 
       ?>
       <div class="row">
         <div class="col-sm-5">

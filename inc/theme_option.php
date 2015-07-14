@@ -105,7 +105,7 @@ function register_contact_settings() {
   //register intro block setting
   register_setting( 'intro-block-settings-group', "show_intro_block" );
 
-  for ($i=0; $i <9 ; $i++) { 
+  for ($i=0; $i <10 ; $i++) { 
     register_setting( 'intro-block-settings-group', "intro_block_title_{$i}" );
     register_setting( 'intro-block-settings-group', "intro_block_icon_{$i}" );
     register_setting( 'intro-block-settings-group', "intro_block_url_{$i}" );

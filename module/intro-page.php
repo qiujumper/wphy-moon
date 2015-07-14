@@ -4,12 +4,12 @@ if (get_option('show_intro_block')=='checked') {
     '22, 160, 133',
     '192, 57, 43',
     '34, 167, 240',
-    '102, 51, 153',
+    '127, 140, 141',
     '41, 128, 185',
     '142, 68, 173',
     '44, 62, 80',
     '243, 156, 18',
-    '127, 140, 141',
+    '102, 51, 153',
     '52, 73, 94'
   );
 ?>
@@ -18,7 +18,7 @@ if (get_option('show_intro_block')=='checked') {
     <div class="limiter option-blocks">
 
     <?php 
-      for ($i=0; $i <9 ; $i++) {
+      for ($i=0; $i <10 ; $i++) {
         $data = array(); 
         $data=array(
           'title'=>get_option("intro_block_title_{$i}"),
