@@ -27,6 +27,7 @@ function register_contact_settings() {
   register_setting( 'contact-settings-group', 'about_us' );
   register_setting( 'contact-settings-group', 'show_team' );
   register_setting( 'contact-settings-group', 'logo' );
+  register_setting( 'contact-settings-group', 'beian' );
 
   
   add_option('tel','021-1234567');
@@ -149,7 +150,7 @@ function theme_option_html_wphy() {
     <li role="presentation" class="active"><a href="#golbal" aria-controls="golbal" role="tab" data-toggle="tab">全局设置</a></li>
 
     <li role="presentation"><a href="#slider" aria-controls="slider" role="tab" data-toggle="tab">幻灯片</a></li>
-
+    <li role="presentation"><a href="#intro" aria-controls="intro" role="tab" data-toggle="tab">首页介绍区块</a></li>
     <li role="presentation" ><a href="#contact" aria-controls="contact" role="tab" data-toggle="tab">联系方式</a></li>
     <li role="presentation"><a href="#smallslider" aria-controls="smallslider" role="tab" data-toggle="tab">小幻灯片</a></li>
     <li role="presentation"><a href="#block3" aria-controls="block3" role="tab" data-toggle="tab">首页3栏区块</a></li>
@@ -157,7 +158,6 @@ function theme_option_html_wphy() {
     <li role="presentation"><a href="#featurepost" aria-controls="featurepost" role="tab" data-toggle="tab">首页特色文章</a></li>
     <li role="presentation"><a href="#fullwidth" aria-controls="fullwidth" role="tab" data-toggle="tab">首页文案</a></li>
     <li role="presentation"><a href="#textblock" aria-controls="textblock" role="tab" data-toggle="tab">首页文字区块</a></li>
-    <li role="presentation"><a href="#intro" aria-controls="intro" role="tab" data-toggle="tab">首页介绍区块</a></li>
   </ul>
 
   <!-- Tab panes -->

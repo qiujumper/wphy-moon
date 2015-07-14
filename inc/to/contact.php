@@ -20,7 +20,7 @@
         </td>
       </tr>
 
-      <td>二维码</td>
+      <td>LOGO </td>
         <td>
           <?php print_image_field('logo','logo_button'); ?>        
         </td>
@@ -74,6 +74,12 @@
         <td>
           <input class="form-control" type="text" name="address" value="<?php echo esc_attr( get_option('address') ); ?>" />
         </td>
+      </tr>
+
+      <tr>
+      <td>备案号</td>
+        <td>
+          <?php wp_editor( get_option("beian"), "beian"); ?>         </td>
       </tr>
 
       <tr>

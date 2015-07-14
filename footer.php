@@ -64,6 +64,7 @@
     </div>
     <div class="col-sm-12 copy-right">
       <h3>
+        <?php echo get_option('beian'); ?><br/>
         copyright © 2015 Wordpress花园 |  主题由<a href="http://wordpresshy.com/" target="_blank">Wordpress花园</a>提供
       </h3>
     </div>
