@@ -1,5 +1,8 @@
 <?php
-add_action('admin_head', 'frog_admin_style');
+if($_GET['page']=='theme-option-wphy.php'){
+  add_action('admin_head', 'frog_admin_style');
+}
+
 function frog_admin_style() {
   echo '<link rel="stylesheet" href="'.get_bloginfo('template_directory').'/css/bootstrap.min.css" type="text/css" media="all" />';
   echo '<script src="'.get_bloginfo('template_directory').'/js/bootstrap.min.js" type="text/javascript"></script>';
