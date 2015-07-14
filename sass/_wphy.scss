@@ -377,11 +377,11 @@ input[type="search"].search-field{
      background: #1cbac8;
     border-color: #1cbac8;
     color: white;
-    font-weight: bold;
     padding: 7px;
     box-shadow: none;
     border: 0px;
     font-size: 15px;
+    border-bottom:4px solid #1BA39C;
   }
 
   .widget_search .search-submit {
@@ -720,6 +720,40 @@ background-color:#1cbac8;
 
 .textwidget{
   padding:10px;
+}
+
+.gform_wrapper .left_label input.medium, .gform_wrapper .left_label select.medium, .gform_wrapper .right_label input.medium, .gform_wrapper .right_label select.medium,.gform_wrapper .left_label textarea.medium,textarea{
+  background-color: #ECECEC;
+  border: 0px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding:7px;
+}
+input:focus,textarea:focus{
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+}
+
+.gform_wrapper form ul.left_label li, .gform_wrapper form ul.right_label li, .gform_wrapper ul.left_label li, .gform_wrapper ul.right_label li{
+  margin-bottom:25px;
+}
+
+.gform_wrapper .gform_footer input[type=submit]{
+    background: #1cbac8;
+    border-color: #1cbac8;
+    color: white;
+    padding: 7px;
+    box-shadow: none;
+    border: 0px;
+    font-size: 15px;
+    border-bottom:4px solid #1BA39C;
+}
+
+.navbar-header{
+  .logo{
+    height:45px;
+  }
 }
 
 /*==========  Non-Mobile First Method  ==========*/

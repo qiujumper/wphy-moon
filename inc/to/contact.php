@@ -20,6 +20,13 @@
         </td>
       </tr>
 
+      <td>二维码</td>
+        <td>
+          <?php print_image_field('logo','logo_button'); ?>        
+        </td>
+      </tr>
+
+
       <tr>
       <td>电话号码</td>
         <td>

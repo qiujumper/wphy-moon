@@ -32,9 +32,15 @@
       <div class="col-sm-12">
         <nav class="navbar navbar-inverse container" role="navigation">
           <div class="navbar-header">
+          <?php if(get_option('logo' )){ ?>
+          <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+            <img src="<?php echo get_option('logo' ); ?>" alt="<?php bloginfo( 'name' ); ?>" class="logo" />
+          </a>
+          <?php }else{ ?>
             <h1 class="site-title">
               <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
             </h1>
+            <?php } ?>
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
               <span class="glyphicon glyphicon-th-large"></span>
             </button>

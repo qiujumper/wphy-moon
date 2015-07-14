@@ -27,11 +27,10 @@ get_sidebar();
       );
       $wp_query = new WP_Query($args_page); 
       if ( $wp_query->have_posts() ) : while ( $wp_query->have_posts() ) : $wp_query->the_post();
-      get_template_part( 'template-parts/content');
-
+      get_template_part( 'template-parts/content');    
+      endwhile;
       include(locate_template('module/pagination.php'));
-    
-      endwhile;       
+       
       else : 
       get_template_part( 'template-parts/content', 'none' );
       endif; ?>

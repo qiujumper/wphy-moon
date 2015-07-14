@@ -26,6 +26,7 @@ function register_contact_settings() {
   register_setting( 'contact-settings-group', 'address' );
   register_setting( 'contact-settings-group', 'about_us' );
   register_setting( 'contact-settings-group', 'show_team' );
+  register_setting( 'contact-settings-group', 'logo' );
 
   
   add_option('tel','021-1234567');

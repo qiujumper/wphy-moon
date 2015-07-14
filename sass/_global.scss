@@ -96,14 +96,17 @@ button,button:hover{
 
 
 button,#submit,button:hover,input[type="button"]:hover, input[type="reset"]:hover,input[type="submit"]:hover{
-  background: #1cbac8;
-  border-color: #1cbac8;
-  color: white;
-  font-weight: bold;
-  
-  box-shadow: none;
-  border: 0px;
-  font-size: 15px;
+ position:relative;
+    top:2px;
+    display: inline;
+     background: #1cbac8;
+    border-color: #1cbac8;
+    color: white;
+    padding: 7px;
+    box-shadow: none;
+    border: 0px;
+    font-size: 15px;
+    border-bottom:4px solid #1BA39C;
 }
 
 
