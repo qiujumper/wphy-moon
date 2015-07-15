@@ -6,6 +6,7 @@
  *
  * @package wphy_moon
  */
+include(locate_template('module/button-text.php'));
 
 ?>
 
