@@ -94,7 +94,17 @@ if (has_post_thumbnail(get_the_ID())) {
           }
         ?>        
       </div>
-		<?php the_content(); ?>
+      <?php 
+            if (get_field('video')) {
+          ?>
+            <div class="video" style="margin-bottom: 10px;">
+            <h3>wordpress视频教程</h3>
+              <?php the_field('video') ?>
+              <br/>
+            </div>
+          <?php
+            }
+		the_content(); ?>
 		<?php include(locate_template('module/share-button.php')); ?> 
 		<?php
 			wp_link_pages( array(
