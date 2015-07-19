@@ -807,6 +807,34 @@ input:focus,textarea:focus{
         display:block;
       }
 
+      .full-width-text-block{
+        padding:0px;
+      }
+
+      .bg-full-width{
+        background:none;
+      }
+
+      .intro-block .bg-image .option-blocks {
+        padding:0px;
+        padding-top:20px;
+        padding-bottom:20px;
+        .option-block{
+          height:auto;
+          padding:0px;
+          margin:0 auto;
+          float:none;
+          margin-bottom:15px;
+          .icon{
+            display:none;
+          }
+        }
+      }
+
+      .full-width-text-block .content p{
+        width:90%;
+      }
+
     }
 
     /* Extra Small Devices, Phones */ 
