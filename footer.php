@@ -73,8 +73,13 @@ include(locate_template('module/button-text.php'));
 	</footer><!-- #footer -->
 </div><!-- #page -->
 
-<?php wp_footer(); ?>
+<?php wp_footer(); 
+if(strpos(get_home_url(),'localhost')){
+
+?>
 <script src="//localhost:35729/livereload.js"></script>
-<?php echo get_option('analytic');  ?> 
+<?php 
+}
+echo get_option('analytic');  ?> 
 </body>
 </html>
