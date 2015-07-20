@@ -532,9 +532,14 @@ input[type="search"].search-field{
   }
 }
 
+.comment-body{
+  word-break:break-all; 
+}
+
 .comment-list{
   .comment-body{
-    margin-bottom:20px;
+    margin-bottom:20px;  
+    
   }
   .comment-author{
     &:before{
