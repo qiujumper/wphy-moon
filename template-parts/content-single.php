@@ -90,9 +90,13 @@ if (has_post_thumbnail(get_the_ID())) {
               echo $value.', ';
             } ?>
         </div>
+       
         <?php
           }
-        ?>        
+        ?> 
+         <div style="font-size:15px; display: inline;">
+          WordPress花园承接各种<h2 style="font-size:15px; display: inline;">WordPress建站</h2>项目,包括<h3 style="display: inline;font-size:15px;" >WordPress企业站</h3>以及<h3 style="font-size:15px; display: inline;">Wordpress商城</h3>
+        </div>       
       </div>
       <?php 
             if (get_field('video')) {
