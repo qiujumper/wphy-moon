@@ -1,18 +1,21 @@
 <?php
 /**
- * Template Name:plugin list
+ * Template Name:List Page
  */
 
 get_header(); 
-?>
+  if ( have_posts() ) :  the_post(); ?>
+
 <header class="page-header">
-<h1 class="page-title">Wordpress必备插件</h1>
-<?php
-  the_archive_description( '<div class="taxonomy-description">', '</div>' );
-?>
+<?php if(get_feature_image_by_id(get_the_ID())){ ?>
+  <img src="<?php echo get_feature_image_by_id(get_the_ID()); ?>" alt="<?php the_title(); ?>" class="header-image">
+<?php } ?>
+  <h1 class="page-title"><?php the_title(); ?></h1>
+  <div class="taxonomy-description"><h2><?php the_content(); ?></h2></div>
 </header><!-- .page-header -->
 <div class="container">
-<?php 
+<?php
+$post_type = get_field('post_type')?get_field('post_type'):'post'; 
 get_sidebar();
 ?>
 
@@ -21,7 +24,7 @@ get_sidebar();
     <?php
       $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
       $args_page=array(
-      'post_type'=>'post',
+      'post_type'=>$post_type,
       'posts_per_page' => 10,
       'paged'=>$paged
       );
@@ -33,9 +36,15 @@ get_sidebar();
        
       else : 
       get_template_part( 'template-parts/content', 'none' );
-      endif; ?>
+      endif; 
+      wp_reset_postdata();
+      ?>
 
     </main><!-- #main -->
   </div><!-- #primary -->
 </div>
-<?php get_footer(); ?>
+<?php
+  endif;
+  wp_reset_postdata(); 
+  get_footer(); 
+?>
