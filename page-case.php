@@ -5,7 +5,7 @@
 get_header(); 
 ?>
 <header class="page-header">
-  <h1>案例展示</h1>
+  <h1 class="page-title">案例展示</h1>
   <div class="taxonomy-description">我们提供专业的wordpress定制服务，包括企业站已经商城<br/>所有网站均为响应式网站，支持多种主流手机平板设备</div>
 </header><!-- .page-header -->
 <div class="container">
