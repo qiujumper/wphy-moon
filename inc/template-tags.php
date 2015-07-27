@@ -48,11 +48,11 @@ function the_post_navigation() {
 	$previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
 	$next     = get_adjacent_post( false, '', false );
 
-	if ( ! $next && ! $previous ) {
+	if ( ! $next && ! $previous ) { 
 		return;
 	}
 	?>
-	<nav class="navigation post-navigation" role="navigation">
+	<nav class="navigation post-navigation" role="navigation"> 
 		<h2 class="screen-reader-text"><?php esc_html_e( 'Post navigation', 'wphy_moon' ); ?></h2>
 		<div class="nav-links">
 			<?php

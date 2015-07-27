@@ -118,6 +118,12 @@ if (has_post_thumbnail(get_the_ID())) {
 		?>
 	</div><!-- .entry-content -->
 	<div class="tag-cloud"><?php the_tags('','',''); ?></div>
+  <div class="nav-links page-nav-wphy">
+      <?php
+        previous_post_link( '<div class="nav-previous">上一篇: %link</div>', '%title' );
+        next_post_link( '<div class="nav-next">下一篇: %link</div>', '%title' );
+      ?>
+  </div><!-- .nav-links -->
 
 </article><!-- #post-## -->
 
