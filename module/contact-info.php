@@ -3,8 +3,8 @@
     <li>电话:<?php echo get_option('tel'); ?></li>
 <?php } if (get_option('qq')) {?>
     <li>QQ号:<?php echo get_option('qq'); ?></li>
-<?php } if (get_option('qq-group')) {?>
-    <li>QQ群:<?php echo get_option('qq-group'); ?></li>
+<?php } if (get_option('qq_group')) {?>
+    <li>QQ群:<?php echo get_option('qq_group'); ?></li>
 <?php } if (get_option('email')) {?>
     <li>Email:<?php echo get_option('email'); ?></li>
 <?php } if (get_option('weixin')) {?>
