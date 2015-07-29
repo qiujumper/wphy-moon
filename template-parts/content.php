@@ -25,7 +25,7 @@ if (has_post_thumbnail(get_the_ID())) {
 
 	<div class="meta-info">
 		<span class="author"><?php the_author(); ?> | </span>
-		<span class="date"><?php the_date('Y-m-d'); ?> | </span>
+		<span class="date"><?php the_time('Y-m-d'); ?> </span>
 		<span><?php the_category(); ?></span>
 		<div class="clearfix"></div>		
 	</div>
