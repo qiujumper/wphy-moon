@@ -108,7 +108,21 @@ if (has_post_thumbnail(get_the_ID())) {
             </div>
           <?php
             }
-		the_content(); ?>
+
+            if (get_field('video_link')) {
+          ?>
+            <div class="video" style="margin-bottom: 10px;">
+            <h3>wordpress视频教程</h3>
+              <video controls="controls" width="100%" height="auto">
+                <source src="<?php the_field('video_link'); ?>" type="video/mp4" />
+              </video>
+              <br/>
+            </div>
+          <?php
+            }
+
+		        the_content(); 
+          ?>
 		<?php include(locate_template('module/share-button.php')); ?> 
 		<?php
 			wp_link_pages( array(
