@@ -109,6 +109,7 @@ function register_contact_settings() {
 
   //register intro block setting
   register_setting( 'intro-block-settings-group', "show_intro_block" );
+  register_setting( 'intro-block-settings-group', "intro_bg" );
 
   for ($i=0; $i <10 ; $i++) { 
     register_setting( 'intro-block-settings-group', "intro_block_title_{$i}" );
@@ -150,7 +151,7 @@ function theme_option_html_wphy() {
 
   <!-- Nav tabs -->
   <ul class="nav nav-tabs" role="tablist">
-    <li role="presentation" class="active"><a href="#golbal" aria-controls="golbal" role="tab" data-toggle="tab">全局设置</a></li>
+    <li role="presentation" class="active"><a href="#global" aria-controls="global" role="tab" data-toggle="tab">全局设置</a></li>
 
     <li role="presentation"><a href="#slider" aria-controls="slider" role="tab" data-toggle="tab">幻灯片</a></li>
     <li role="presentation"><a href="#intro" aria-controls="intro" role="tab" data-toggle="tab">首页介绍区块</a></li>

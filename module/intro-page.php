@@ -12,9 +12,11 @@ if (get_option('show_intro_block')=='checked') {
     '102, 51, 153',
     '52, 73, 94'
   );
+
+  $intro_bg = get_option('intro_bg')?get_option('intro_bg'):get_stylesheet_directory_uri().'/image/home.png';
 ?>
 <div class="container-fluid intro-block">
-  <div class="bg-image bg-full-width" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/image/home.png);">
+  <div class="bg-image bg-full-width" style="background-image: url(<?php echo $intro_bg;?>);">
     <div class="limiter option-blocks">
 
     <?php 

@@ -11,6 +11,18 @@
         <span>是否开启</span> <input type="checkbox"  id="show_intro_block" name="show_intro_block" <?php echo get_option("show_intro_block"); ?> value="checked">
       </p>
     </div><br/>
+    <div class="row">
+      <div class="col-sm-5">
+        背景图片
+      </div>
+      <div class="col-sm-7">
+        <div class="theme-field">
+          <?php print_image_field("intro_bg","intro_bg_button") ?>
+        </div>
+      </div>
+    </div>
+    <br/><br/>
+    
     <?php
     for ($i=0; $i <10 ; $i++) { 
       ?>
