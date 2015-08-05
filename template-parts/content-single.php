@@ -10,6 +10,12 @@ if (has_post_thumbnail(get_the_ID())) {
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<header class="entry-header">
+    <div class="breadcrumbs" xmlns:v="http://rdf.data-vocabulary.org/#">
+        <?php if(function_exists('bcn_display'))
+        {
+            bcn_display();
+        }?>
+    </div>
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
 		<div class="meta-info">
