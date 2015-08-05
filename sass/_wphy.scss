@@ -803,13 +803,18 @@ input:focus,textarea:focus{
       }
       .row{
         text-align: center;
-        margin:15px;
+        margin:0px;
         p{
           text-align: left;
         }
       }
       .site-branding.row{
         margin:0px;
+      }
+
+      #content,.container,#primary{
+        margin:0px;
+        padding:0px;
       }
       #primary{
         padding-left:inherit;

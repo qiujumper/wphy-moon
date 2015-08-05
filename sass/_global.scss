@@ -21,6 +21,10 @@ ul,li{
   padding:0px;
   margin:0px;
 }
+ol,ol li{
+  list-style-type: decimal;
+  margin-bottom:5px;
+}
 button{
   box-shadow:none;
 }
