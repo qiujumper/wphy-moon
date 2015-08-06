@@ -22,6 +22,7 @@ if (has_post_thumbnail(get_the_ID())) {
 			<span class="author"><?php the_author(); ?> | </span>
 			<span class="date"><?php the_date('Y-m-d'); ?> | </span>
 			<span> <?php the_category(); ?></span>
+      <span>QQ群:<?php echo get_option('qq_group'); ?></span>
 			<div class="clearfix"></div>		
 		</div>
 	</header><!-- .entry-header -->
@@ -129,7 +130,11 @@ if (has_post_thumbnail(get_the_ID())) {
 
 		        the_content(); 
           ?>
-		<?php include(locate_template('module/share-button.php')); ?> 
+    <div class="qq-group">
+      如果对该内容感兴趣或者有疑问,欢迎加QQ群讨论:<?php echo get_option('qq_group'); ?>
+    </div> <br/>
+		<?php include(locate_template('module/share-button.php')); ?>
+    
 		<?php
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wphy_moon' ),
