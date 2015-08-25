@@ -117,11 +117,12 @@ function register_contact_settings() {
     register_setting( 'intro-block-settings-group', "intro_block_url_{$i}" );
   }
 
+  register_setting( 'global-settings-group', "use_wphy" );
   register_setting( 'global-settings-group', "show_case" );
   register_setting( 'global-settings-group', "case_type" );
   register_setting( 'global-settings-group', "case_num" );
   register_setting( 'global-settings-group', "analytic" );
-  register_setting( 'global-settings-group', "ee" );
+  register_setting( 'global-settings-group', "show_case_global" );
 
 
 }

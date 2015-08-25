@@ -15,6 +15,14 @@ include(locate_template('module/button-text.php'));
 	<footer id="footer" class="site-footer " role="contentinfo">
   <div class="container">  
 		<div class="row">
+    <?php if (get_option('client')) { ?>
+    <div class="col-sm-12 client">
+      <div class="client-title">
+        合作伙伴
+      </div>
+      <?php echo get_option('client'); ?>
+    </div>
+    <?php } ?>
     <div class="col-sm-3">
       <div class="about-us">
         <div class="title"><h3><?php bloginfo( 'name' ); ?></h3></div>

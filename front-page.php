@@ -1,4 +1,5 @@
 <?php
+if(get_option('use_wphy')){
 get_header();
 include(locate_template('module/slider.php')); 
 ?>
@@ -21,4 +22,10 @@ include(locate_template('module/slider.php'));
     </main><!-- #main -->
   </div><!-- #primary -->
 
-<?php get_footer(); ?> 
+<?php 
+get_footer(); 
+
+}else{
+    include(locate_template('index.php'));
+}
+?> 
