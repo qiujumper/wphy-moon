@@ -13,7 +13,7 @@ function frog_admin_style() {
 add_action( 'admin_menu', 'theme_option_wphy' );
 
 function theme_option_wphy() {
-  add_menu_page( 'WordPress花园', 'WordPress花园', 'manage_options', 'theme-option-wphy.php', 'theme_option_html_wphy' );
+  add_menu_page( 'WordPress花园', 'WordPress花园', 'manage_options', 'theme-option-wphy.php', 'theme_option_html_wphy','',1 );
 }
 add_action( 'admin_init', 'register_contact_settings' );
 function register_contact_settings() {

@@ -47,13 +47,16 @@
             
           </div>
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <?php wp_nav_menu(array(
-                'theme_location'            =>'top',
-                'container'       => 'my-top-menu-container',
-                'menu_class'      => 'nav navbar-nav navbar-right',
-                'walker'            => new wp_bootstrap_navwalker()
-              )
-              );  
+          <?php 
+          if(has_nav_menu('top')){ 
+            wp_nav_menu(array(
+                  'theme_location'            =>'top',
+                  'container'       => 'my-top-menu-container',
+                  'menu_class'      => 'nav navbar-nav navbar-right',
+                  'walker'            => new wp_bootstrap_navwalker()
+                )
+            ); 
+          } 
           ?>
           </div>
         </nav><!-- #site-navigation -->

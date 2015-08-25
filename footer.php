@@ -60,12 +60,14 @@ include(locate_template('module/button-text.php'));
       <div class="title">联系方式</div>
       <?php include(locate_template('module/contact-info.php')); ?>
       <div class="page-links">        
-        <?php 
-        wp_nav_menu(array(
-            'theme_location'            =>'footer',
-            'container' => false
-          )
-        ); 
+        <?php
+        if(has_nav_menu('footer')){ 
+          wp_nav_menu(array(
+              'theme_location'            =>'footer',
+              'container' => false
+            )
+          ); 
+        }
       ?>
       </div><!-- page-links -->
       
