@@ -35,11 +35,11 @@ function register_contact_settings() {
   
   add_option('tel','021-1234567');
   add_option('email','wordpresshy@126.com');
-  add_option('qq','406758623');
+  add_option('qq','2839076296');
   add_option('qq_group','348046974');
   add_option('weixin','wordpresshy');
   add_option('weibo','iqiujumper');
-  add_option('qc','wordpresshy');
+  add_option('qr','wordpresshy');
   add_option('address','shanghai');
   add_option('about_us','wordpress花园提供多种基于wordpress的技术服务,分享Wordpress视频教程,Wordpress模板下载,Wordpress主题下载，Wordpress汉化以及Wordpress项目合作。');
   

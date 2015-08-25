@@ -433,6 +433,7 @@ input[type="search"].search-field{
         position: relative;
         padding: 10px;
         padding-right:15px;
+        margin-bottom:0px;
 
         &:hover{
           background-color: #f8f8f8;
@@ -798,6 +799,10 @@ input:focus,textarea:focus{
   text-decoration: none;
   color: #262626;
   background-color: inherit;
+}
+
+.navbar-right .dropdown-menu{
+  right:auto;
 }
 /*==========  Non-Mobile First Method  ==========*/
 

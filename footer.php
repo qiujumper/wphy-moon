@@ -62,7 +62,7 @@ include(locate_template('module/button-text.php'));
       <div class="page-links">        
         <?php 
         wp_nav_menu(array(
-            'menu'            =>'Footer Menu',
+            'theme_location'            =>'footer',
             'container' => false
           )
         ); 
@@ -72,10 +72,10 @@ include(locate_template('module/button-text.php'));
     </div>  
     </div>
     <div class="col-sm-12 copy-right">
-      <h3>
+      <h5 style="font-size: 12px; font-weight: 100; margin-top: 0px;">
         <?php echo get_option('beian'); ?><br/>
-        copyright © 2015 Wordpress花园 |  主题由<a href="http://wordpresshy.com/" target="_blank">Wordpress花园</a>提供
-      </h3>
+        copyright © 2015 Wordpress花园 |  网站由<a href="http://wordpresshy.com/" target="_blank">Wordpress花园</a>提供
+      </h5>
     </div>
   </div>
 	</footer><!-- #footer -->

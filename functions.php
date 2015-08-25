@@ -267,3 +267,17 @@ function wphy_comment($comment, $args, $depth){
 		return $result;
 
 }
+
+add_action( 'after_setup_theme', 'register_my_menu' );
+function register_my_menu() {
+  register_nav_menu( 'top', __( '顶部菜单', 'wphy' ) );
+  register_nav_menu( 'footer', __( '底部菜单', 'wphy' ) );
+}
+
+
+
+
+
+
+
+
