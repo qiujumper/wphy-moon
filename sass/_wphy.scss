@@ -34,8 +34,13 @@
 .dropdown-menu{
   background-color:#101010;
   color:#fff;
+  border-top:0px;
+  padding-top:0px;
   &>li>a{
     color:#9d9d9d;
+    height: 35px;
+    line-height: 35px;
+
   }
 }
 .navbar-toggle{
@@ -76,13 +81,14 @@
         bottom:100px;
         left:60px;
         max-width:500px;
-
+        background-color: rgba(16, 178, 193, 0.81);
         .title{
-          margin-bottom: 20px;
+          
           font-size:35px;
-          background-color: rgba(25, 181, 254, 0.8);
+         
           
           padding:11px;
+          padding-bottom:0px;
           
           color:white;
         }
@@ -90,7 +96,7 @@
         .content{
           
           font-size: 20px;
-          background-color: rgba(25, 181, 254, 0.8);
+          
           padding:11px;
           color:white;
         }
@@ -165,7 +171,7 @@
         height: 100%;
         top:0px;
         font-size: 20px;
-        background-color: rgba(34, 167, 240,0.8);
+        background-color: rgba(16, 178, 193, 0.81);
         color:white;        
         display: none;
       }
@@ -606,6 +612,7 @@ input[type="search"].search-field{
   .menu-item{
     a{
       font-size:15px;
+      color:white;
     }
   }
 }
@@ -672,7 +679,7 @@ input[type="search"].search-field{
     height: 100%;
     width:100%;
     position: absolute;
-    background-color: rgba(52,152,219,0.7);
+    background-color: rgba(16, 178, 193, 0.81);
     color:white;
     text-align: center;
     padding:10px;
@@ -785,6 +792,12 @@ input:focus,textarea:focus{
 
 .feature-image{
   overflow:hidden;
+}
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+  text-decoration: none;
+  color: #262626;
+  background-color: inherit;
 }
 /*==========  Non-Mobile First Method  ==========*/
 

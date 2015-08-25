@@ -85,7 +85,7 @@
       <tr>
       <td>二维码</td>
         <td>
-          <?php print_image_field('qc','qc_button'); ?>        
+          <?php print_image_field('qr','qr_button'); ?>        
         </td>
       </tr>
 

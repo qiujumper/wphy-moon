@@ -25,7 +25,7 @@ function register_contact_settings() {
   register_setting( 'contact-settings-group', 'qq_group' );
   register_setting( 'contact-settings-group', 'weixin' );
   register_setting( 'contact-settings-group', 'weibo' );
-  register_setting( 'contact-settings-group', 'qc' );
+  register_setting( 'contact-settings-group', 'qr' );
   register_setting( 'contact-settings-group', 'address' );
   register_setting( 'contact-settings-group', 'about_us' );
   register_setting( 'contact-settings-group', 'show_team' );

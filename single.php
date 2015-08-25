@@ -27,7 +27,9 @@ get_sidebar();
 			?>
 
 		<?php endwhile; // End of the loop. ?>
-
+		<?php         
+			include(locate_template('module/case-area-single.php'));
+ 		?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 </div><!-- container -->
