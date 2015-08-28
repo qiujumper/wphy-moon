@@ -27,8 +27,10 @@ get_sidebar();
 			?>
 
 		<?php endwhile; // End of the loop. ?>
-		<?php         
-			include(locate_template('module/case-area-single.php'));
+		<?php
+		if (get_option('show_case')&&get_option('show_case_global')) {
+		 	include(locate_template('module/case-area-single.php'));
+		}         
  		?>
 		</main><!-- #main -->
 	</div><!-- #primary -->

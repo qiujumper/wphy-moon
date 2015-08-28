@@ -15,11 +15,17 @@ if (get_option('show_case')=='checked') {
       while($query_case->have_posts()){
         $query_case->the_post();
         $data=array();
+        $image_link='';
+        if (function_exists('get_field')) {
+          $image_link=get_image_by_id(get_field('pic'));
+        }else{
+          $image_link=get_feature_image_by_id(get_the_ID());
+        }
         $data=array(
           'title'=>get_the_title(),
           'excertp'=>get_the_excerpt(),
           'link'=>get_permalink(),
-          'image'=>get_image_by_id(get_field('pic'))
+          'image'=>$image_link
         );
         ?>
         <div class="col-sm-4 item">

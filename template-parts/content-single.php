@@ -30,6 +30,8 @@ if (has_post_thumbnail(get_the_ID())) {
 	<div class="entry-content">
 		<div class="customed-field">
         <?php
+        if (function_exists('get_field')) {
+        
           if(get_field('plugin_name')){
         ?>
           <div class="item">
@@ -100,13 +102,14 @@ if (has_post_thumbnail(get_the_ID())) {
        
         <?php
           }
+        }
         ?> 
          <div style="font-size:15px; display: inline;">
           WordPress花园承接各种<h2 style="font-size:15px; display: inline;">WordPress建站</h2>项目,包括<h3 style="display: inline;font-size:15px;" >WordPress企业站</h3>以及<h3 style="font-size:15px; display: inline;">Wordpress商城</h3>
         </div>       
       </div>
       <?php 
-            if (get_field('video')) {
+            if (function_exists('get_field')&&get_field('video')) {
           ?>
             <div class="video" style="margin-bottom: 10px;">
             <h3>wordpress视频教程</h3>
@@ -116,7 +119,7 @@ if (has_post_thumbnail(get_the_ID())) {
           <?php
             }
 
-            if (get_field('video_link')) {
+            if (function_exists('get_field')&&get_field('video_link')) {
           ?>
             <div class="video" style="margin-bottom: 10px;">
             <h3>wordpress视频教程</h3>

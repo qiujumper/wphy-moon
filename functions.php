@@ -274,7 +274,13 @@ function register_my_menu() {
   register_nav_menu( 'footer', __( '底部菜单', 'wphy' ) );
 }
 
-
+add_filter( 'gettext_with_context', 'wpdx_disable_open_sans', 888, 4 );
+function wpdx_disable_open_sans( $translations, $text, $context, $domain ) {
+  if ( 'Open Sans font: on or off' == $context && 'on' == $text ) {
+    $translations = 'off';
+  }
+  return $translations;
+}
 
 
 

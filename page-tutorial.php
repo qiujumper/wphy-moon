@@ -5,7 +5,7 @@
 get_header(); 
 ?>
 <header class="page-header">
-  <h1>Wordpress视频教程大全</h1>
+  <h1 class="page-title">Wordpress视频教程大全</h1>
   <div class="taxonomy-description">
     包含Wordpress的新手入门教程，插件使用教程，模板制作教程，商城创建教程  
   </div>

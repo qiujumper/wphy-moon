@@ -15,7 +15,10 @@ get_header();
 </header><!-- .page-header -->
 <div class="container">
 <?php
-$post_type = get_field('post_type')?get_field('post_type'):'post'; 
+$post_type='post';
+if (function_exists('get_field')) {
+  $post_type = get_field('post_type')?get_field('post_type'):'post'; 
+}
 get_sidebar();
 ?>
 
