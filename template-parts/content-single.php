@@ -104,9 +104,7 @@ if (has_post_thumbnail(get_the_ID())) {
           }
         }
         ?> 
-         <div style="font-size:15px; display: inline;">
-          WordPress花园承接各种<h2 style="font-size:15px; display: inline;">WordPress建站</h2>项目,包括<h3 style="display: inline;font-size:15px;" >WordPress企业站</h3>以及<h3 style="font-size:15px; display: inline;">Wordpress商城</h3>
-        </div>       
+              
       </div>
       <?php 
             if (function_exists('get_field')&&get_field('video')) {
@@ -132,11 +130,14 @@ if (has_post_thumbnail(get_the_ID())) {
             }
 
 		        the_content(); 
+            if(get_option('qq_group')){
           ?>
     <div class="qq-group">
       如果对该内容感兴趣或者有疑问,欢迎加QQ群讨论:<?php echo get_option('qq_group'); ?>
     </div> <br/>
-		<?php include(locate_template('module/share-button.php')); ?>
+		<?php 
+  }
+    include(locate_template('module/share-button.php')); ?>
     
 		<?php
 			wp_link_pages( array(

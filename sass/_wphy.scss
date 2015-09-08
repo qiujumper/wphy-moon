@@ -160,6 +160,8 @@
   .image-block{
     .image{
       position:relative;
+      max-height:225px;
+      overflow: hidden;
       img{
         width:100%;
       }
@@ -194,8 +196,8 @@
 
 
 .full-width-text-block{
-  background-color: #f9f9f9;
-  color:#333;
+  background-color: #1cbac8;
+  color:white;
   text-align: center;
   padding:50px;
   h3{
@@ -206,6 +208,7 @@
   .content p{
     width:60%;margin:0 auto;
     margin-bottom:40px;
+    color:white;
   }
 }
 
@@ -853,6 +856,8 @@ input:focus,textarea:focus{
 
       .full-width-text-block{
         padding:0px;
+        padding-top:20px;
+        margin-bottom: 20px;
       }
 
       .bg-full-width{
@@ -877,6 +882,22 @@ input:focus,textarea:focus{
 
       .full-width-text-block .content p{
         width:90%;
+      }
+
+      .text-block-area .text-block{
+        min-height:inherit;
+      }
+      .flex-control-nav,.flex-direction-nav{
+        display: none;
+      }
+
+      .icon-text{
+        margin-bottom: 50px;
+        p{
+            width: 90%;
+            margin: 0 auto;
+            margin-bottom:0px;
+        }
       }
 
     }

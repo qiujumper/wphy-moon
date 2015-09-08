@@ -7,9 +7,7 @@
       </div>
     </div>
   </a>
-  <div class="title">
-    <a href="<?php echo $data['link']; ?>"><?php echo $data['title']; ?></a>
-  </div>
+ <br/>
   <div class="content">
     <p><?php echo $data['excerpt']; ?></p>
   </div>

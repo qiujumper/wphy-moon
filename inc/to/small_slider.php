@@ -37,6 +37,7 @@
   </div>
 
   <div class="col-sm-6">
+    建议比例为3:2 比如300px*200px <br/>
     <?php print_image_field("small_slider_image_{$i}","small_slider_image_{$i}_button") ?>
   </div>
 </div>

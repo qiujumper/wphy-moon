@@ -145,7 +145,7 @@ function theme_option_html_wphy() {
   </blockquote>
   <p>
     <a href="http://wordpresshy.com" target="_blank"><button type="button" class="btn btn-primary">WordPress花园官网</button></a>
-    <a href="http://wordpresshy.com/business" target="_blank"><button type="button" class="btn btn-primary">配套视频教程</button></a>
+    <a href="http://wordpresshy.com/work/moon.html" target="_blank"><button type="button" class="btn btn-primary">配套视频教程</button></a>
   </p>
 </div>
 <div role="tabpanel">
