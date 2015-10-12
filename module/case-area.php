@@ -1,7 +1,7 @@
 <?php 
 if (get_option('show_case')=='checked') {
 ?>
-<div class="container show-case">
+<div class="container show-case ccc">
   <div class="block-title"><h2><a href="/show-case">案例展示</a></h2></div>
   <div class="row three-image-block">
   <?php 
@@ -16,7 +16,7 @@ if (get_option('show_case')=='checked') {
         $query_case->the_post();
         $data=array();
         $image_link='';
-        if (function_exists('get_field')) {
+        if (function_exists('get_field')&&get_field('pic')) {
           $image_link=get_image_by_id(get_field('pic'));
         }else{
           $image_link=get_feature_image_by_id(get_the_ID());
