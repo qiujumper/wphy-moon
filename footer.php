@@ -22,54 +22,29 @@ include(locate_template('module/button-text.php'));
       </div>
       <?php } ?>
       <div class="col-sm-3">
-        <div class="about-us">
-          <div class="title"><h3><?php bloginfo( 'name' ); ?></h3></div>
-          <div class="content"><?php echo get_option('about_us'); ?></div>
-        </div>
-        <div class="searcharea"><br/>
-          <?php 
-          get_search_form_wphy(true);
-          ?>
-        </div>
+        <?php
+          get_sidebar('footer-1');
+        ?>
       </div>
+      
       <div class="col-sm-3">
-        <div class="title">
-          最新文章
-        </div>
-        <div class="recent-post">
-          <ul>          
-            <?php 
-            $args = array( 'numberposts' => '5','post_type'=>'any','post_status'=>'publish' );
-            $recent_posts = wp_get_recent_posts( $args ); 
-            foreach( $recent_posts as $recent ){
-              echo '<li><a href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a> </li> ';
-            }
-            ?>
-          </ul>
-        </div>
+        <?php
+          get_sidebar('footer-2');
+        ?>
       </div>
-      <div class="col-sm-3">
-        <div class="title">热门标签</div>
-        <div class="tag-cloud">
-          <?php wp_tag_cloud( 'number=10&orderby=count&order=RAND' ); ?>
-        </div>
-      </div>
-      <div class="col-sm-3">
-        <div class="title">联系方式</div>
-        <?php include(locate_template('module/contact-info.php')); ?>
-        <div class="page-links">        
-          <?php
-          if(has_nav_menu('footer')){ 
-            wp_nav_menu(array(
-              'theme_location'            =>'footer',
-              'container' => false
-              )
-            ); 
-          }
-          ?>
-        </div><!-- page-links -->
 
-      </div>  
+      <div class="col-sm-3">
+        <?php
+          get_sidebar('footer-3');
+        ?>
+      </div>
+
+      <div class="col-sm-3">
+        <?php
+          get_sidebar('footer-4');
+        ?>
+      </div>
+    
     </div>
     <div class="col-sm-12 copy-right">
       <h5 style="font-size: 12px; font-weight: 100; margin-top: 0px;">

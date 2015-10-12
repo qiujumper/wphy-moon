@@ -295,6 +295,24 @@
   color:#888;
   padding:60px 0 20px 0;
 
+  .widget{
+    background-color: #222;
+    h1{
+      background-color: #222;
+      color:white;
+      &:before{
+        display: none;
+      }
+    }
+    ul{
+      li{
+        border-bottom: 1px solid gray;
+        &:hover{
+          background-color: inherit;
+        }
+      }
+    }
+  }
   
 
   a{

@@ -41,7 +41,7 @@ function wphy_moon_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary Menu', 'wphy_moon' ),
-	) );
+		) );
 
 	/*
 	 * Switch default core markup for search form, comment form, and comments
@@ -53,7 +53,7 @@ function wphy_moon_setup() {
 		'comment-list',
 		'gallery',
 		'caption',
-	) );
+		) );
 
 }
 endif; // wphy_moon_setup
@@ -76,6 +76,46 @@ function wphy_moon_widgets_init() {
 		'after_title'   => '</h1>',
 	) );
 
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer 1', 'wphy_moon' ),
+		'id'            => 'footer-1',
+		'description'   => '',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h1 class="widget-title">',
+		'after_title'   => '</h1>',
+	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer 2', 'wphy_moon' ),
+		'id'            => 'footer-2',
+		'description'   => '',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h1 class="widget-title">',
+		'after_title'   => '</h1>',
+	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer 3', 'wphy_moon' ),
+		'id'            => 'footer-3',
+		'description'   => '',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h1 class="widget-title">',
+		'after_title'   => '</h1>',
+	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer 4', 'wphy_moon' ),
+		'id'            => 'footer-4',
+		'description'   => '',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h1 class="widget-title">',
+		'after_title'   => '</h1>',
+	) );
+
 
 }
 add_action( 'widgets_init', 'wphy_moon_widgets_init' );
@@ -85,9 +125,9 @@ add_action( 'widgets_init', 'wphy_moon_widgets_init' );
  */
 function wphy_moon_scripts() {
 	wp_enqueue_script('jquery');
-	 wp_enqueue_style( 'wphy-flexslider-style', get_template_directory_uri().'/css/flexslider.css' );
-	 wp_enqueue_style( 'wphy-font-awesome', get_template_directory_uri().'/css/font-awesome.css' );
-	 wp_enqueue_style( 'wphy-animate-style', get_template_directory_uri().'/css/animate.css' );
+	wp_enqueue_style( 'wphy-flexslider-style', get_template_directory_uri().'/css/flexslider.css' );
+	wp_enqueue_style( 'wphy-font-awesome', get_template_directory_uri().'/css/font-awesome.css' );
+	wp_enqueue_style( 'wphy-animate-style', get_template_directory_uri().'/css/animate.css' );
 	wp_enqueue_style( 'wphy_moon-style', get_stylesheet_uri() );
 	wp_enqueue_script( 'moon-js', get_template_directory_uri() . '/moon.min.js', array('jquery'),'1.0.0', true );
 
@@ -121,38 +161,38 @@ function wphy_comment($comment, $args, $depth){
 		$tag = 'li';
 		$add_below = 'div-comment';
 	}
-?>
+	?>
 	<<?php echo $tag ?> <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ) ?> id="comment-<?php comment_ID() ?>">
 	<?php if ( 'div' != $args['style'] ) : ?>
-	<div id="div-comment-<?php comment_ID() ?>" class="comment-body">
-	<?php endif; ?>
-	<div class="comment-author vcard">
-	<?php
-	printf( __( '<span class="fn">%s </span>' ), get_comment_author_link() );  
-	printf( __('%1$s'),get_comment_time('Y-m-d') ); ?></a><?php edit_comment_link( __( '(编辑)' ), '  ', '' );
-	?>
-	</div>
-	<?php if ( $comment->comment_approved == '0' ) : ?>
-		<em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.' ); ?></em>
-		<br />
-	<?php endif; ?>
-
-	<div class="comment_text">
-	<?php comment_text(); ?>
-
-		<div class="reply">
-		<?php comment_reply_link( array_merge( $args, array( 'add_below' => $add_below, 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+		<div id="div-comment-<?php comment_ID() ?>" class="comment-body">
+		<?php endif; ?>
+		<div class="comment-author vcard">
+			<?php
+			printf( __( '<span class="fn">%s </span>' ), get_comment_author_link() );  
+			printf( __('%1$s'),get_comment_time('Y-m-d') ); ?></a><?php edit_comment_link( __( '(编辑)' ), '  ', '' );
+			?>
 		</div>
-	</div>
+		<?php if ( $comment->comment_approved == '0' ) : ?>
+			<em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.' ); ?></em>
+			<br />
+		<?php endif; ?>
 
-	
-	<?php if ( 'div' != $args['style'] ) : ?>
-	</div>
+		<div class="comment_text">
+			<?php comment_text(); ?>
+
+			<div class="reply">
+				<?php comment_reply_link( array_merge( $args, array( 'add_below' => $add_below, 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+			</div>
+		</div>
+
+
+		<?php if ( 'div' != $args['style'] ) : ?>
+		</div>
 	<?php endif; ?>
-<?php
+	<?php
 }
 
-	function get_search_form_wphy( $echo = true ) {
+function get_search_form_wphy( $echo = true ) {
 	/**
 	 * Fires before the search form is retrieved, at the start of get_search_form().
 	 *
@@ -183,22 +223,22 @@ function wphy_comment($comment, $args, $depth){
 	} else {
 		if ( 'html5' == $format ) {
 			$form = '<form role="search" method="get" class="search-form" action="' . esc_url( home_url( '/' ) ) . '">
-				<label>
-					<span class="screen-reader-text">' . _x( 'Search for:', 'label' ) . '</span>
-					<input type="search" class="search-field" placeholder="阁下想知道什么呢?" value="' . get_search_query() . '" name="s" title="' . esc_attr_x( 'Search for:', 'label' ) . '" />
-				</label>
-				<input type="submit" class="search-submit" value="'. esc_attr_x( 'Search', 'submit button' ) .'" />
-			</form>';
-		} else {
-			$form = '<form role="search" method="get" id="searchform" class="searchform" action="' . esc_url( home_url( '/' ) ) . '">
-				<div>
-					<label class="screen-reader-text" for="s">' . _x( 'Search for:', 'label' ) . '</label>
-					<input type="text" value="' . get_search_query() . '" name="s" id="s" />
-					<input type="submit" id="searchsubmit" value="'. esc_attr_x( 'Search', 'submit button' ) .'" />
-				</div>
-			</form>';
-		}
-	}
+			<label>
+				<span class="screen-reader-text">' . _x( 'Search for:', 'label' ) . '</span>
+				<input type="search" class="search-field" placeholder="阁下想知道什么呢?" value="' . get_search_query() . '" name="s" title="' . esc_attr_x( 'Search for:', 'label' ) . '" />
+			</label>
+			<input type="submit" class="search-submit" value="'. esc_attr_x( 'Search', 'submit button' ) .'" />
+		</form>';
+	} else {
+		$form = '<form role="search" method="get" id="searchform" class="searchform" action="' . esc_url( home_url( '/' ) ) . '">
+		<div>
+			<label class="screen-reader-text" for="s">' . _x( 'Search for:', 'label' ) . '</label>
+			<input type="text" value="' . get_search_query() . '" name="s" id="s" />
+			<input type="submit" id="searchsubmit" value="'. esc_attr_x( 'Search', 'submit button' ) .'" />
+		</div>
+	</form>';
+}
+}
 
 	/**
 	 * Filter the HTML output of the search form.
@@ -221,17 +261,17 @@ function wphy_comment($comment, $args, $depth){
 
 add_action( 'after_setup_theme', 'register_my_menu' );
 function register_my_menu() {
-  register_nav_menu( 'top', __( '顶部菜单', 'wphy' ) );
-  register_nav_menu( 'footer', __( '底部菜单', 'wphy' ) );
+	register_nav_menu( 'top', __( '顶部菜单', 'wphy' ) );
+	register_nav_menu( 'footer', __( '底部菜单', 'wphy' ) );
 }
 
 //disable font
 add_filter( 'gettext_with_context', 'wpdx_disable_open_sans', 888, 4 );
 function wpdx_disable_open_sans( $translations, $text, $context, $domain ) {
-  if ( 'Open Sans font: on or off' == $context && 'on' == $text ) {
-    $translations = 'off';
-  }
-  return $translations;
+	if ( 'Open Sans font: on or off' == $context && 'on' == $text ) {
+		$translations = 'off';
+	}
+	return $translations;
 }
 
 
