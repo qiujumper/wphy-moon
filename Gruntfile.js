@@ -30,7 +30,7 @@ module.exports = function(grunt) {
           beautify: true
         },
         files: {
-          'dist/js/script.min.js': ['public/js/jquery.min.js','public/js/**/*.js']
+          'moon.min.js': ['js/**/*.js']
         }
       }
     },
@@ -64,7 +64,7 @@ module.exports = function(grunt) {
       },
       styles: {
         files: ['sass/**/*.scss','**/*.php','js/**/*.js','wphy.js'], // which files to watch
-        tasks: ['sass'],
+        tasks: ['sass','uglify'],
         options: {
           nospawn: true
         }

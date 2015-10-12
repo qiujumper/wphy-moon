@@ -19,13 +19,6 @@ if ( ! function_exists( 'wphy_moon_setup' ) ) :
  * as indicating support for post thumbnails.
  */
 function wphy_moon_setup() {
-	/*
-	 * Make theme available for translation.
-	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on wphy_moon, use a find and replace
-	 * to change 'wphy_moon' to the name of your theme in all the template files
-	 */
-	load_theme_textdomain( 'wphy_moon', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -62,38 +55,10 @@ function wphy_moon_setup() {
 		'caption',
 	) );
 
-	/*
-	 * Enable support for Post Formats.
-	 * See http://codex.wordpress.org/Post_Formats
-	 */
-	add_theme_support( 'post-formats', array(
-		'aside',
-		'image',
-		'video',
-		'quote',
-		'link',
-	) );
-
-	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'wphy_moon_custom_background_args', array(
-		'default-color' => 'ffffff',
-		'default-image' => '',
-	) ) );
 }
 endif; // wphy_moon_setup
 add_action( 'after_setup_theme', 'wphy_moon_setup' );
 
-/**
- * Set the content width in pixels, based on the theme's design and stylesheet.
- *
- * Priority 0 to make it available to lower priority callbacks.
- *
- * @global int $content_width
- */
-function wphy_moon_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'wphy_moon_content_width', 640 );
-}
-add_action( 'after_setup_theme', 'wphy_moon_content_width', 0 );
 
 /**
  * Register widget area.
@@ -110,6 +75,8 @@ function wphy_moon_widgets_init() {
 		'before_title'  => '<h1 class="widget-title">',
 		'after_title'   => '</h1>',
 	) );
+
+
 }
 add_action( 'widgets_init', 'wphy_moon_widgets_init' );
 
@@ -117,19 +84,14 @@ add_action( 'widgets_init', 'wphy_moon_widgets_init' );
  * Enqueue scripts and styles.
  */
 function wphy_moon_scripts() {
+	wp_enqueue_script('jquery');
 	 wp_enqueue_style( 'wphy-flexslider-style', get_template_directory_uri().'/css/flexslider.css' );
 	 wp_enqueue_style( 'wphy-font-awesome', get_template_directory_uri().'/css/font-awesome.css' );
-
 	 wp_enqueue_style( 'wphy-animate-style', get_template_directory_uri().'/css/animate.css' );
-
-
 	wp_enqueue_style( 'wphy_moon-style', get_stylesheet_uri() );
-	wp_enqueue_script( 'wphy-bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '1.0.0', true );
-	wp_enqueue_script( 'wphy-flexslider-js', get_template_directory_uri() . '/js/jquery.flexslider-min.js', array('jquery'), '1.0.0', true );
-	wp_enqueue_script( 'wphy_moon-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
+	wp_enqueue_script( 'moon-js', get_template_directory_uri() . '/moon.min.js', array('jquery'),'1.0.0', true );
 
-	wp_enqueue_script( 'wphy_moon-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
-	wp_enqueue_script( 'wphy-js', get_template_directory_uri() . '/wphy.js', array('jquery','wphy-flexslider-js'), '1.0.0', true );
+	wp_enqueue_script( 'wphy-js', get_template_directory_uri() . '/wphy.js', array('jquery','moon-js'),'1.0.0', true );
 
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -147,17 +109,6 @@ require get_template_directory() . '/inc/custom-header.php';
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
-
-/**
- * Custom functions that act independently of the theme templates.
- */
-require get_template_directory() . '/inc/extras.php';
-
-/**
- * Customizer additions.
- */
-require get_template_directory() . '/inc/customizer.php';
-
 
 function wphy_comment($comment, $args, $depth){
 	$GLOBALS['comment'] = $comment;
@@ -274,6 +225,7 @@ function register_my_menu() {
   register_nav_menu( 'footer', __( '底部菜单', 'wphy' ) );
 }
 
+//disable font
 add_filter( 'gettext_with_context', 'wpdx_disable_open_sans', 888, 4 );
 function wpdx_disable_open_sans( $translations, $text, $context, $domain ) {
   if ( 'Open Sans font: on or off' == $context && 'on' == $text ) {
