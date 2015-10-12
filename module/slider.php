@@ -19,6 +19,9 @@
     <li>
       <a href="<?php echo get_option("slider_url_{$i}"); ?>" target="_blank">
         <img src="<?php echo get_option("slider_image_{$i}"); ?>" />
+        <?php 
+          if (get_option("slider_title_{$i}")||get_option("slider_content_{$i}")) {
+        ?>
         <div class="info">
           <div class="title no-phone <?php echo $animated; ?>" style="<?php echo $text_css; ?>">
             <?php echo get_option("slider_title_{$i}"); ?>
@@ -26,7 +29,10 @@
           <div class="content no-phone <?php echo $animated; ?>" style="<?php echo $text_css; ?>">
             <?php echo get_option("slider_content_{$i}"); ?>
           </div>
-        </div>        
+        </div><!-- info -->
+        <?php 
+          }
+        ?>        
       </a>
     </li>
   
