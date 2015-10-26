@@ -8,10 +8,15 @@
     ?>
     <div class="row">
       <div class="col-md-12 theme-field" >
+        <span>LOGO(选择了LOGO就无法显示站点名称，所以如果希望同时显示LOGO图片和站点名称，可以把文字添加到图片中)</span> &nbsp;&nbsp;&nbsp;<?php print_image_field('logo','logo_button'); ?><br/>
+
+      </div>
+
+      <div class="col-md-12 theme-field" >
         <div class="alert alert-success" role="alert">
           <span>是否启用【定制首页】</span> &nbsp;&nbsp;&nbsp;<input type="checkbox"  id="use_wphy" name="use_wphy"  <?php echo get_option("use_wphy"); ?> value="checked"> 
         </div>
- <hr>
+        <hr>
       </div>
 
       <div class="col-md-12 theme-field" >
@@ -29,11 +34,11 @@
 
       <div class="col-md-12 theme-field" >
         <span>'案例展示'类型</span> &nbsp;&nbsp;&nbsp;<?php print_type_field(); ?>
-         <hr>
+        <hr>
       </div>
       <div class="col-md-12 theme-field">
         <span>合作伙伴</span>(直接上传多张图片即可)<br/><br/>
-          <?php wp_editor( get_option("client"), "client"); ?>
+        <?php wp_editor( get_option("client"), "client"); ?>
 
       </div>
 
@@ -45,11 +50,11 @@
       </div>
 
     </div>
-  
-   
+
+
     
     <?php
-        submit_button();
-      ?>
+    submit_button();
+    ?>
   </form>
 </div>

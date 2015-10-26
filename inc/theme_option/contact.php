@@ -19,14 +19,7 @@
           <input type="checkbox"  id="show_team" name="show_team" <?php echo get_option("show_team"); ?> value="checked">
         </td>
       </tr>
-
-      <td>LOGO </td>
-        <td>
-          <?php print_image_field('logo','logo_button'); ?>        
-        </td>
-      </tr>
-
-
+      
       <tr>
       <td>电话号码</td>
         <td>
