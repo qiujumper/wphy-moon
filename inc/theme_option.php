@@ -29,7 +29,6 @@ function register_contact_settings() {
   register_setting( 'contact-settings-group', 'address' );
   register_setting( 'contact-settings-group', 'about_us' );
   register_setting( 'contact-settings-group', 'show_team' );
-  register_setting( 'contact-settings-group', 'logo' );
   register_setting( 'contact-settings-group', 'beian' );
 
   
@@ -123,6 +122,8 @@ function register_contact_settings() {
   register_setting( 'global-settings-group', "case_num" );
   register_setting( 'global-settings-group', "analytic" );
   register_setting( 'global-settings-group', "show_case_global" );
+  register_setting( 'global-settings-group', "logo" );
+
 
 
 }
@@ -198,43 +199,43 @@ function theme_option_html_wphy() {
     <!-- Tab panes -->
     <div class="tab-content">
       <div role="tabpanel" class="tab-pane active" id="global">
-        <?php require get_template_directory() . '/inc/to/global.php'; ?>
+        <?php require get_template_directory() . '/inc/theme_option/global.php'; ?>
       </div>
 
       <div role="tabpanel" class="tab-pane fade" id="contact">
-        <?php require get_template_directory() . '/inc/to/contact.php'; ?>
+        <?php require get_template_directory() . '/inc/theme_option/contact.php'; ?>
       </div>
 
       <div role="tabpanel" class="tab-pane fade" id="slider">
-        <?php require get_template_directory() . '/inc/to/slider.php'; ?>
+        <?php require get_template_directory() . '/inc/theme_option/slider.php'; ?>
       </div>
 
       <div role="tabpanel" class="tab-pane fade" id="smallslider">
-        <?php require get_template_directory() . '/inc/to/small_slider.php'; ?>
+        <?php require get_template_directory() . '/inc/theme_option/small_slider.php'; ?>
       </div>
 
       <div role="tabpanel" class="tab-pane fade" id="block3">
-        <?php require get_template_directory() . '/inc/to/block_3.php'; ?>
+        <?php require get_template_directory() . '/inc/theme_option/block_3.php'; ?>
       </div>
 
       <div role="tabpanel" class="tab-pane fade" id="block2">
-        <?php require get_template_directory() . '/inc/to/block_2.php'; ?>
+        <?php require get_template_directory() . '/inc/theme_option/block_2.php'; ?>
       </div>
 
       <div role="tabpanel" class="tab-pane fade" id="featurepost">
-        <?php require get_template_directory() . '/inc/to/feature_post.php'; ?>
+        <?php require get_template_directory() . '/inc/theme_option/feature_post.php'; ?>
       </div>
 
       <div role="tabpanel" class="tab-pane fade" id="fullwidth">
-        <?php require get_template_directory() . '/inc/to/full_width_block.php'; ?>
+        <?php require get_template_directory() . '/inc/theme_option/full_width_block.php'; ?>
       </div>
 
       <div role="tabpanel" class="tab-pane fade" id="textblock">
-        <?php require get_template_directory() . '/inc/to/text_area.php'; ?>
+        <?php require get_template_directory() . '/inc/theme_option/text_area.php'; ?>
       </div>
 
       <div role="tabpanel" class="tab-pane fade" id="intro">
-        <?php require get_template_directory() . '/inc/to/intro.php'; ?>
+        <?php require get_template_directory() . '/inc/theme_option/intro.php'; ?>
       </div>
 
     </div>
