@@ -123,6 +123,9 @@ function register_contact_settings() {
   register_setting( 'global-settings-group', "analytic" );
   register_setting( 'global-settings-group', "show_case_global" );
   register_setting( 'global-settings-group', "logo" );
+  register_setting( 'global-settings-group', "client_url" );
+  register_setting( 'global-settings-group', "client_title" );
+  register_setting( 'global-settings-group', "client_image" );
 
 
 

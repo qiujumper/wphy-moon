@@ -13,3 +13,26 @@ body{
 .is_show{
   padding:10px;
 }
+
+.field{
+  margin:10px;
+}
+
+.repeat-fields-area{
+ 
+}
+.repeat-group{
+  padding-bottom: 10px;
+  border-bottom: 1px solid #F3F3F5;
+}
+
+.image-button-area{
+  margin-top:8px;
+  margin-bottom: 8px;
+}
+
+.repeat-fields-area .repeat-fields{
+  margin-bottom: 10px;
+  background-color: #F3F3F5;
+  padding:5px;
+}

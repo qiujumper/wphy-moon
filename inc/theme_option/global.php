@@ -37,10 +37,40 @@
         <hr>
       </div>
       <div class="col-md-12 theme-field">
-        <span>合作伙伴</span>(直接上传多张图片即可)<br/><br/>
-        <?php wp_editor( get_option("client"), "client"); ?>
+        <span>合作伙伴</span>(以图片的形式显示在底部)<br/><br/>
+        <div class="repeat-group">
+         <div class="repeat-fields-area">
 
-      </div>
+        <?php          
+          $client_url = get_option('client_url');
+          $client_title = get_option('client_title');
+          $client_num = count($client_url);
+          for ($i=0; $i < $client_num; $i++) { 
+        ?>
+          <div class="repeat-fields">
+             <div class="col-md-6">
+              <div class="field">标题: <input type="text"  name="client_title[]" value="<?php echo $client_title[$i]; ?>"></div>
+
+               <div class="field">链接: <input type="text" size=35 name="client_url[]" value="<?php echo $client_url[$i]; ?>"></div>
+               <div class="field"><button class="remove-field btn btn-danger btn-xs">删除</button></div>
+             </div><!-- col-md-6 -->
+
+             <div class="col-md-6">
+               <div class="field"><?php print_image_field('client_image',$i,true); ?></div>
+             </div>
+             <div class="clearfix"></div>
+           </div><!-- repeat-fields -->
+        <?php
+          }
+        ?>
+
+           
+
+         </div> <!-- repeat-fields-area make sure to have a better layout with add button-->
+        <div class="clearfix"></div>
+            <button class="add-field btn btn-info btn-sm">添加一组字段</button> 
+         </div><!-- repeat-group the whole repeat feild-->
+      </div><!-- theme-field -->
 
       <div class="col-md-12 theme-field">
         <span>统计代码</span>(全部的统计代码都可贴在这里)<br/><br/>

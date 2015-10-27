@@ -56,31 +56,59 @@ function get_permalink_by_slug($page_slug,$post_type = 'page' ) {
 }
 
 /**
- * create image field for theme option
+ * create image field for theme option,if it's a repeater field, use 'image_name[]' format
  * $option_slug : the id of the result input field;
- * $button_id : the id of image uplad button field
+ * $uid : used in foreach loop of $option_slug image array OR use as an unique id for a single image
+ * 
+ * ##the button for image must be unique, can not share same class, otherwise we can not close the media box
  */
  
 
-function print_image_field($option_slug,$button_id){
+function print_image_field($option_slug,$uid,$is_repeater=false){
 
 // jQuery
 wp_enqueue_script('jquery');
 // This will enqueue the Media Uploader script
 wp_enqueue_media();
+$image_url_field_name = '';
+$result_arr = get_option($option_slug);
+
+
+if ($is_repeater) {
+  $image_url_field_name = $option_slug.'[]';
+  $image_url_field_value = $result_arr[$uid];
+}else{
+  $image_url_field_name = $option_slug;
+  $image_url_field_value = $result_arr;
+}
 ?>
-    <div>
-    <input type="text" name="<?php echo $option_slug; ?>" id="<?php echo $option_slug; ?>" value="<?php echo get_option($option_slug); ?>" class="regular-text">
-    <input type="button" name="<?php echo $button_id; ?>" id="<?php echo $button_id; ?>" class="btn btn-info" value="选择图片">
-    <br/>
-    <img src="<?php echo esc_attr( get_option($option_slug) ); ?>" alt="" class="<?php echo $option_slug; ?>" style="width:300px;" >
+<div class="image-upload-field">
+  <input type="text" name="<?php echo $image_url_field_name; ?>" value="<?php echo $image_url_field_value; ?>" class="regular-text image-url-field">
+  <div class="image-button-area">
+    <input type="button" class="btn btn-info image-upload-button<?php echo $uid; ?>" value="选择图片">
+    <input type="button" class="btn btn-danger remove-image-button" value="移除图片">
+  </div>
+  
+  <?php 
+    if ($image_url_field_value) {
+  ?>
+  <img src="<?php echo esc_attr($image_url_field_value); ?>" class="image-field" style="width:300px;" >
+  <?php } ?>
 </div>
 <script type="text/javascript">
 jQuery(document).ready(function($){
-    $('#<?php echo $button_id; ?>').click(function(e) {
+    $('.repeat-group').on('click','.remove-image-button',function(e) {
+      e.preventDefault();
+      $image_upload_field = $(this).closest('.image-upload-field');
+      $image_upload_field.find('.image-url-field').val('');
+      $image_upload_field.find('.image-field').attr('src','');
+
+    });
+    $('.repeat-group').on('click','.image-upload-button<?php echo $uid; ?>',function(e) {
         e.preventDefault();
+        $image_upload_field = $(this).closest('.image-upload-field');
         var image = wp.media({ 
-            title: 'Upload Image',
+            title: '上传图片',
             // mutiple: true if you want to upload multiple files at once
             multiple: false
         }).open()
@@ -88,11 +116,14 @@ jQuery(document).ready(function($){
             // This will return the selected image from the Media Uploader, the result is an object
             var uploaded_image = image.state().get('selection').first();
             // We convert uploaded_image to a JSON object to make accessing it easier
-            
+            //console.log('cccc');
             var image_url = uploaded_image.toJSON().url;
+            
             // Let's assign the url value to the input field
-            $('#<?php echo $option_slug; ?>').val(image_url);
-            $('.<?php echo $option_slug; ?>').attr('src',image_url);
+            $image_upload_field.find('.image-url-field').val(image_url);
+            $image_upload_field.find('.image-field').attr('src',image_url);
+            
+
         });
     });
 });
