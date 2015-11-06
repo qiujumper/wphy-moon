@@ -1,7 +1,7 @@
 <?php 
 if (get_option('show_featured_post')=='checked') {
 ?>
-<div class="container">
+<div class="limiter">
   <div class="row image-block-area">
     <?php
       $feature_post_id = array(); 

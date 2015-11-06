@@ -19,17 +19,25 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
+//global style
 @import "bt3/_bootstrap";
-
-@import "wphy/_nav";
-
 @import "_global";
 @import "_normalize.scss";
 @import "_variable";
 
+//global component
+@import "wphy/_nav";
+@import "wphy/_slider";
+@import "wphy/_footer";
+
+//homepage element
+@import "wphy/_icon-text-area";
+@import "wphy/_half-block-area";
+@import "wphy/_image-block-area";
+@import "wphy/_image-post-slider";
+
+//customize stylee
 @import "_wphy";
 
-/*--------------------------------------------------------------
-# Media
---------------------------------------------------------------*/
+//custom media query
 @import "_media";

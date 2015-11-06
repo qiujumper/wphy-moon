@@ -1,0 +1,19 @@
+.half-block-area{
+  .half-block{
+    &:first-child{
+      background-color: rgb(247, 247, 247);
+    }
+    min-height:400px;
+    background-color: rgb(241, 241, 241);
+    padding:5%;
+    .title{
+      font-weight:bold;
+    }
+    .readmore{
+      padding:11px;
+      font-size:16px;
+      color:white;
+      background-color: $green-blue;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+#footer{
+  background-color: #222;  
+  color:#888;
+  padding:60px 0 20px 0;
+
+  .widget{
+    background-color: #222;
+    h1{
+      background-color: #222;
+      color:white;
+      &:before{
+        display: none;
+      }
+    }
+    ul{
+      li{
+        border-bottom: 1px solid gray;
+        &:hover{
+          background-color: inherit;
+        }
+      }
+    }
+  }
+  
+
+  a{
+
+    color:#888;
+  }
+  .about-us{
+
+  }
+  .title{
+    color:white;
+    margin-bottom:10px;
+  }
+
+  .recent-post{
+    li{
+      padding-top:5px;
+      padding-bottom:5px;
+      border-bottom:1px solid gray;
+    }
+  }
+  .copy-right{
+    text-align: center;
+    border-top:1px solid gray;
+    margin-top:20px;
+    padding-top:20px;
+    h3{
+      font-size:14px;
+    }
+  }
+}

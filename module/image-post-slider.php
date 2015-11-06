@@ -3,7 +3,7 @@
     $slider_arr = get_option('small_slider');    
 ?>
 <div class="image-post-slider">
-  <div class="container">
+  <div class="limiter">
     <div class="row image-post-slider-wrapper">
       <ul class="slides">
       <?php

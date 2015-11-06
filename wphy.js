@@ -31,39 +31,39 @@ jQuery(document).ready(function($){
   }); 
 
   $('.image-block-slide').hover(function() {
-    $(this).find('img').addClass('pulse');
+    $(this).find('img').stop(true,false).addClass('pulse');
     $(this).find('.info').stop(true,false).show();
-    $(this).find('.info').find('.title').addClass('slideInUp');
-    $(this).find('.info').find('.content').addClass('slideInUp');
+    $(this).find('.info').stop(true,false).find('.title').addClass('slideInUp');
+    $(this).find('.info').stop(true,false).find('.content').addClass('slideInUp');
   }, function() {
-    $(this).find('img').removeClass('pulse');
+    $(this).find('img').stop(true,false).removeClass('pulse');
     $(this).find('.info').stop(true,false).hide();
-    $(this).find('.info').find('.title').removeClass('slideInUp');
-    $(this).find('.info').find('.content').removeClass('slideInUp');
+    $(this).find('.info').stop(true,false).find('.title').removeClass('slideInUp');
+    $(this).find('.info').stop(true,false).find('.content').removeClass('slideInUp');
   });
 
   //global hover effect for image
   $('img').hover(function() {
-    $(this).addClass('pulse');
+    $(this).stop(true,false).addClass('pulse');
   }, function() {
-    $(this).removeClass('pulse');
+    $(this).stop(true,false).removeClass('pulse');
   }); 
 
   $('.option-block').hover(function() {
-    $(this).addClass('bounce');
+    $(this).stop(true,false).addClass('bounce');
   }, function() {
-    $(this).removeClass('bounce');
+    $(this).stop(true,false).removeClass('bounce');
   }); 
 
   
   $('.image-block .image').hover(function() {
-    $(this).find('.img-title').fadeIn();
+    $(this).find('.img-title').stop(true,false).fadeIn();
   }, function() {
-    $(this).find('.img-title').fadeOut();
+    $(this).find('.img-title').stop(true,false).fadeOut();
   }); 
 
   $('.scroll-top').click(function() {
-    $("html, body").animate({ scrollTop: 0 }, "slow");
+    $("html, body").stop(true,false).animate({ scrollTop: 0 }, "slow");
     return false;
   });
 });

@@ -1,0 +1,36 @@
+.image-post-slider{
+  background-color: #f9f9f9;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  overflow: hidden;
+  .image{
+    max-height:245px;
+    overflow: hidden;
+  }
+  .image-post-slider-wrapper{
+    position:relative;
+  }
+  
+  li{
+    margin-right:30px;
+  }
+  .image-post{
+    background-color: white;
+    .info{
+      padding:9px;
+      .title{
+        font-size: 16px;
+        margin-bottom:10px;
+        margin-top:10px;
+        font-weight: bold;
+      }
+      .content{
+        margin-bottom:20px;
+        min-height:50px;
+      }
+      .date{
+        color:#999999;
+      }
+    }
+  }
+}
