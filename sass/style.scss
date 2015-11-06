@@ -20,6 +20,9 @@ Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
 @import "bt3/_bootstrap";
+
+@import "wphy/_nav";
+
 @import "_global";
 @import "_normalize.scss";
 @import "_variable";

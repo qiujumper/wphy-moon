@@ -1,0 +1,44 @@
+.navbar{
+  margin-bottom:0px;
+}
+.dropdown-menu{
+  background-color:#101010;
+  color:#fff;
+  border-top:0px;
+  padding-top:0px;
+  &>li>a{
+    color:#9d9d9d;
+    height: 35px;
+    line-height: 35px;
+
+  }
+}
+.navbar-toggle{
+  
+  color:#7a828f;
+  font-size:20px;
+  padding:6px;
+  float:right;
+  margin-top:6px;
+  margin-bottom:0px;
+  border:none;
+  span{
+    color:white;
+  }
+}
+
+.navbar-header{
+  .logo{
+    height:45px;
+    width:200px;
+
+  }
+ 
+}
+
+.navbar-inverse{
+  border:0px;
+}
+.navbar-right .dropdown-menu{
+  right:auto;
+}

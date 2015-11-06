@@ -1,4 +1,8 @@
 jQuery(document).ready(function($){ 
+
+  //create square block
+  make_square();
+  
   $('.flexslider').flexslider({
     before:function(slider){
       $title = slider.find('.title');

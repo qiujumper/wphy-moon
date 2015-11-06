@@ -1,7 +1,7 @@
 <?php 
 if (get_option('show_case')=='checked') {
 ?>
-<div class="container show-case ccc">
+<div class="container show-case ">
   <div class="block-title"><h2><a href="/show-case">案例展示</a></h2></div>
   <div class="row three-image-block">
   <?php 

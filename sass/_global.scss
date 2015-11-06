@@ -1,15 +1,20 @@
 $green-blue:#1cbac8;
 
-body ::selection {
-    color:white;
-    background-color:$green-blue;
-    text-shadow:none;
+.wphy{
+  overflow:hidden;
 }
-body ::-moz-selection {
-    color:white;
-    background-color:$green-blue;
-    text-shadow:none;
 
+.limiter{
+  margin:0 auto;
+  max-width:1170px;
+}
+
+img{
+  width:100%;
+}
+
+.square-div{
+  overflow: hidden;
 }
 
 body{
@@ -28,14 +33,7 @@ ol,ol li{
 button{
   box-shadow:none;
 }
-.wphy{
-  overflow:hidden;
-}
 
-.limiter{
-  margin:0 auto;
-  max-width:1170px;
-}
 h1,h2,h3,h4,h5,h6{
   margin-top:10px;
   margin-bottom:10px;
