@@ -4,7 +4,8 @@
   <form method="post" action="options.php">
     <?php 
     settings_fields( 'global-settings-group' ); 
-    do_settings_sections( 'global-settings-group' ); 
+    do_settings_sections( 'global-settings-group' );
+    submit_button('保存设置');
     ?>
     <div class="row">
       <div class="col-md-12 theme-field" >
@@ -80,11 +81,8 @@
       </div>
 
     </div>
-
-
-    
     <?php
-    submit_button();
+    submit_button('保存设置');
     ?>
   </form>
 </div>

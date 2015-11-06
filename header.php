@@ -8,7 +8,7 @@
  */
 
 ?><!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,7 +25,8 @@
   <a href="#top" target="_self">
     <span class="glyphicon glyphicon-chevron-up"></span>
   </a>
-</div>
+</div><!-- scroll-top -->
+
 	<header class="site-header " role="banner">
 		<div class="site-branding row">
     
@@ -61,9 +62,7 @@
           </div>
         </nav><!-- #site-navigation -->
       </div>
-		</div><!-- .site-branding -->
-
-		
+		</div><!-- .site-branding -->		
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content row">

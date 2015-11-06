@@ -77,9 +77,11 @@ $result_arr = get_option($option_slug);
 if ($is_repeater) {
   $image_url_field_name = $option_slug.'[]';
   $image_url_field_value = $result_arr[$uid];
+  $click_ele = '.repeat-group';
 }else{
   $image_url_field_name = $option_slug;
   $image_url_field_value = $result_arr;
+  $click_ele = '.image-upload-field';
 }
 ?>
 <div class="image-upload-field">
@@ -97,14 +99,14 @@ if ($is_repeater) {
 </div>
 <script type="text/javascript">
 jQuery(document).ready(function($){
-    $('.repeat-group').on('click','.remove-image-button',function(e) {
+    $('<?php echo $click_ele; ?>').on('click','.remove-image-button',function(e) {
       e.preventDefault();
       $image_upload_field = $(this).closest('.image-upload-field');
       $image_upload_field.find('.image-url-field').val('');
       $image_upload_field.find('.image-field').attr('src','');
 
     });
-    $('.repeat-group').on('click','.image-upload-button<?php echo $uid; ?>',function(e) {
+    $('<?php echo $click_ele; ?>').on('click','.image-upload-button<?php echo $uid; ?>',function(e) {
         e.preventDefault();
         $image_upload_field = $(this).closest('.image-upload-field');
         var image = wp.media({ 
