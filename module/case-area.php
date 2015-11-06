@@ -3,7 +3,7 @@ if (get_option('show_case')=='checked') {
 ?>
 <div class="limiter show-case ">
   <div class="block-title">
-    <a href="/show-case">案例展示</a>
+    <a href="<?php echo get_permalink_by_slug('cases'); ?>">案例展示</a>
   </div>
 
   <div class="row three-image-block">
