@@ -3,5 +3,8 @@
   padding-bottom:100px;
   .content{
     min-height:90px;
+    @media(max-width:$phone){
+      min-height:inherit;
+    }
   }
 }

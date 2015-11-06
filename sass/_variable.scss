@@ -1,3 +1,17 @@
-//global variable
+//get breakpoints from bootstrap:http://getbootstrap.com/css/#grid
+$minphone           : 480px;
+$phone              : 767px;  
+$tablet             : 992px;  
+$desktop            : 1024px;  
+$maxDesktop         : 1200px; 
+
+//site color
+$black-dark:#30333b;
+$black-light:#373B44;
+
+//font color
+$font-dark: #3a424d;
+$font-light:#9197A8;
+$font-gray:#78797B;
 
 $green-blue : #1cbac8;
