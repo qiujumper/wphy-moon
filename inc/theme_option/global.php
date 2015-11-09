@@ -37,7 +37,12 @@
         <span>'案例展示'类型</span> &nbsp;&nbsp;&nbsp;<?php print_type_field(); ?>
         <hr>
       </div>
+
+      <div class="col-md-12 theme-field" >
+      <span>是否开启'合作伙伴'</span> &nbsp;&nbsp;&nbsp;<input type="checkbox"  id="show_partner" name="show_partner"  <?php echo get_option("show_partner"); ?> value="checked"><br/>
+      </div>
       <div class="col-md-12 theme-field">
+      
         <span>合作伙伴</span>(以图片的形式显示在底部)<br/><br/>
         <div class="repeat-group">
          <div class="repeat-fields-area">

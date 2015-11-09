@@ -9328,6 +9328,32 @@ th {
   font-weight: bold;
 }
 
+/* line 1, sass/wphy/_client-area.scss */
+.client-area {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+/* line 4, sass/wphy/_client-area.scss */
+.client-area img {
+  width: auto;
+  max-width: 100%;
+}
+/* line 8, sass/wphy/_client-area.scss */
+.client-area .block-title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 40px;
+  border-bottom: 1px solid gray;
+  padding-bottom: 10px;
+}
+/* line 16, sass/wphy/_client-area.scss */
+.client-area .item {
+  text-align: center;
+  height: 60px;
+  margin-bottom: 15px;
+  line-height: 60px;
+}
+
 /* line 1, sass/_wphy.scss */
 .container-fluid {
   padding: 0px;
